@@ -1,3 +1,5 @@
+package Task1_resolveEquation;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -6,7 +8,7 @@ public class Main {
         resolveAcq(1, 2, 3);
     }
 
-    public static void resolveAcq(float a, float b, float c) {
+    private static void resolveAcq(float a, float b, float c) {
         System.out.println("a = " + a + " b = " + b + " c = " + c);
         float d = b * b - 4 * a * c;
         if (d > 0) {

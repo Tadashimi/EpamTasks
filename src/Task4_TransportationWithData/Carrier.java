@@ -9,10 +9,11 @@ public class Carrier {
     private String address;
     private CarrierType carrierType;
     private Transportation[] transportations;
+    private int transportationsCount;
 
     public Carrier() {
         id = carriersCount++;
-        int initialArrayLength = 10;
+        int initialArrayLength = 1;
         transportations = new Transportation[initialArrayLength];
     }
 
@@ -54,10 +55,11 @@ public class Carrier {
 
     public void addTransportation(Transportation transportation) {
         int currentArrayLength = transportations.length;
-        if (id >= currentArrayLength) {
+        if (transportationsCount >= currentArrayLength) {
             increaseTransportationsArray(currentArrayLength);
         }
-        transportations[id.intValue()] = transportation;
+        transportations[transportationsCount] = transportation;
+        transportationsCount++;
     }
 
     private void increaseTransportationsArray(int currentArrayLength) {

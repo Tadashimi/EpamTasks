@@ -9,10 +9,11 @@ public class Cargo {
     private int weight;
     private CargoType cargoType;
     private Transportation[] transportations;
+    private int transportationsCount = 0;
 
     public Cargo() {
         id = cargoesCount++;
-        int initialArrayLength = 10;
+        int initialArrayLength = 1;
         transportations = new Transportation[initialArrayLength];
     }
 
@@ -54,10 +55,11 @@ public class Cargo {
 
     public void addTransportation(Transportation transportation) {
         int currentArrayLength = transportations.length;
-        if (id >= currentArrayLength) {
+        if (transportationsCount >= currentArrayLength) {
             increaseTransportationsArray(currentArrayLength);
         }
-        transportations[id.intValue()] = transportation;
+        transportations[transportationsCount] = transportation;
+        transportationsCount++;
     }
 
     private void increaseTransportationsArray(int currentArrayLength) {

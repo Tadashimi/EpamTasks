@@ -1,7 +1,5 @@
 package Task4_TransportationWithData;
 
-import java.util.Arrays;
-
 public class Cargo {
     private static Long cargoesCount = 0L;
     private Long id;

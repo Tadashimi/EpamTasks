@@ -1,7 +1,5 @@
 package Task4_TransportationWithData;
 
-import java.util.Arrays;
-
 public class Carrier {
     private static Long carriersCount = 0L;
     private Long id;

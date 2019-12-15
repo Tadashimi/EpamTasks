@@ -1,12 +1,12 @@
 package Task5_TransportationWithAbstractClass.transportation.domain;
 
-import Task5_TransportationWithAbstractClass.ClassWithIdentifier;
+import Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
 import Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
 import Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
 
 import java.util.Date;
 
-public class Transportation extends ClassWithIdentifier {
+public class Transportation extends BaseDomain {
     private Cargo cargo;
     private Carrier carrier;
     private String description;

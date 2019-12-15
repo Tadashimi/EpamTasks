@@ -1,11 +1,11 @@
 package Task5_TransportationWithAbstractClass.carrier.domain;
 
-import Task5_TransportationWithAbstractClass.ClassWithIdentifier;
+import Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
 import Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
 
 import static Task5_TransportationWithAbstractClass.Constants.INITIAL_ARRAY_CAPACITY;
 
-public class Carrier extends ClassWithIdentifier {
+public class Carrier extends BaseDomain {
     private String name;
     private String address;
     private CarrierType carrierType;

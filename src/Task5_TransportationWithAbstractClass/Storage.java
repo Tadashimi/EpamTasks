@@ -2,6 +2,7 @@ package Task5_TransportationWithAbstractClass;
 
 import Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
 import Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
+import Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
 import Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
 
 import java.util.Objects;
@@ -20,6 +21,7 @@ public class Storage {
 
 
     public static void addCargo(Cargo cargo) {
+        cargo.setId(IdGenerator.generateId());
         int currentArrayLength = allCargoes.length;
         if (cargoIndex >= currentArrayLength) {
             increaseCargoesArray(currentArrayLength);
@@ -35,6 +37,7 @@ public class Storage {
     }
 
     public static void addCarrier(Carrier carrier) {
+        carrier.setId(IdGenerator.generateId());
         int currentArrayLength = allCarriers.length;
         if (carrierIndex < currentArrayLength) {
             increaseCarriersArray(currentArrayLength);
@@ -50,6 +53,7 @@ public class Storage {
     }
 
     public static void addTransportation(Transportation transportation) {
+        transportation.setId(IdGenerator.generateId());
         int currentArrayLength = allTransportations.length;
         if (transportationIndex >= currentArrayLength) {
             increaseTransportationsArray(currentArrayLength);
@@ -101,16 +105,14 @@ public class Storage {
     }
 
     public static Cargo[] getCargoByName(String cargoName) {
-        Cargo[] tempResult = new Cargo[cargoIndex];
+        Cargo[] result = new Cargo[cargoIndex];
         int index = 0;
         for (Cargo cargo : allCargoes) {
             if ((cargo != null) && (Objects.equals(cargo.getName(), cargoName))) {
-                tempResult[index] = cargo;
+                result[index] = cargo;
                 index++;
             }
         }
-        Cargo[] result = new Cargo[index];
-        System.arraycopy(tempResult, 0, result, 0, index);
         return result;
     }
 
@@ -124,16 +126,14 @@ public class Storage {
     }
 
     public static Carrier[] getCarrierByName(String carrierName) {
-        Carrier[] tempResult = new Carrier[carrierIndex];
+        Carrier[] result = new Carrier[carrierIndex];
         int index = 0;
         for (Carrier carrier : allCarriers) {
             if ((carrier != null) && (Objects.equals(carrier.getName(), carrierName))) {
-                tempResult[index] = carrier;
+                result[index] = carrier;
                 index++;
             }
         }
-        Carrier[] result = new Carrier[index];
-        System.arraycopy(tempResult, 0, result, 0, index);
         return result;
     }
 
@@ -146,8 +146,8 @@ public class Storage {
         return null;
     }
 
-    public static ClassWithIdentifier[] getAll() {
-        ClassWithIdentifier[] result = new ClassWithIdentifier[cargoIndex + carrierIndex + transportationIndex];
+    public static BaseDomain[] getAll() {
+        BaseDomain[] result = new BaseDomain[cargoIndex + carrierIndex + transportationIndex];
         System.arraycopy(allCargoes, 0, result, 0, cargoIndex);
         System.arraycopy(allCarriers, 0, result, cargoIndex, carrierIndex);
         System.arraycopy(allTransportations, 0, result, cargoIndex + carrierIndex, transportationIndex);

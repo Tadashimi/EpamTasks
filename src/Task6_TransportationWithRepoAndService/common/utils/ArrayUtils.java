@@ -27,17 +27,10 @@ public final class ArrayUtils {
         arr = tempArray;
     }
 
-    public static void shiftElementsLeftInArray(Object[] arr, int beginIndex, int shift) {
-        boolean beginIndexIsCorrect = (beginIndex > 0) && (beginIndex < arr.length);
-        boolean shiftIsCorrect = (shift > 0) && (shift < arr.length);
-        if (arr != null && beginIndexIsCorrect && shiftIsCorrect) {
-            for (int i = beginIndex; i < arr.length - shift; i++) {
-                arr[i] = arr[i + shift];
-            }
-            for (int i = arr.length - shift; i < arr.length; i++) {
-                arr[i] = null;
-            }
-        }
+    public static void removeElementFromArray(Object[] arr, int index) {
+        int indexOfLatElement = arr.length - 1;
+        System.arraycopy(arr, index + 1, arr, index, indexOfLatElement - index);
+        arr[indexOfLatElement] = null;
         trimArray(arr);
     }
 }

@@ -1,6 +1,7 @@
-package Task6_TransportationWithRepoAndService.transportation.service;
+package Task6_TransportationWithRepoAndService.transportation.service.impl;
 
 import Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
+import Task6_TransportationWithRepoAndService.transportation.service.TransportationService;
 
 public class TransportationServiceImpl implements TransportationService {
 

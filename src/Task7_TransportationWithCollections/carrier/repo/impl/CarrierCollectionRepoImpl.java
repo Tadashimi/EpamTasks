@@ -1,0 +1,55 @@
+package Task7_TransportationWithCollections.carrier.repo.impl;
+
+import Task7_TransportationWithCollections.carrier.domain.Carrier;
+import Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
+import Task7_TransportationWithCollections.storage.IdGenerator;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import static Task7_TransportationWithCollections.storage.Storage.carrierList;
+
+public class CarrierCollectionRepoImpl implements CarrierRepo {
+
+    @Override
+    public void add(Carrier carrier) {
+        carrier.setId(IdGenerator.generateId());
+        carrierList.add(carrier);
+    }
+
+    @Override
+    public Carrier getById(long id) {
+        for (Carrier carrier : carrierList) {
+            if (carrier != null && Objects.equals(carrier.getId(), id)) {
+                return carrier;
+            }
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<Carrier> getByName(String name) {
+        List<Carrier> result = new ArrayList<>();
+        for (Carrier carrier : carrierList) {
+            if (carrier != null && Objects.equals(carrier.getName(), name)) {
+                result.add(carrier);
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public boolean deleteById(long id) {
+        Carrier carrier = getById(id);
+
+        if (carrier != null) {
+            carrierList.remove(carrier);
+            return true;
+        }
+
+        return false;
+    }
+
+}

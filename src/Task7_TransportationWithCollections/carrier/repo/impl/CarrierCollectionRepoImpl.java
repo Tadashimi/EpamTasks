@@ -30,14 +30,14 @@ public class CarrierCollectionRepoImpl implements CarrierRepo {
     }
 
     @Override
-    public List<Carrier> getByName(String name) {
+    public Carrier[] getByName(String name) {
         List<Carrier> result = new ArrayList<>();
         for (Carrier carrier : carrierList) {
             if (carrier != null && Objects.equals(carrier.getName(), name)) {
                 result.add(carrier);
             }
         }
-        return result;
+        return result.toArray(new Carrier[0]);
     }
 
     @Override

@@ -5,8 +5,6 @@ import Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
 import Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
 import Task7_TransportationWithCollections.storage.IdGenerator;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 import static Task7_TransportationWithCollections.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
@@ -42,12 +40,12 @@ public class CarrierArrayRepoImpl implements CarrierRepo {
     }
 
     @Override
-    public List<Carrier> getByName(String name) {
+    public Carrier[] getByName(String name) {
         Carrier[] searchResultWithNullableElems = getByNameIncludingNullElements(name);
         if (searchResultWithNullableElems == null || searchResultWithNullableElems.length == 0) {
-            return Arrays.asList(EMPTY_CARRIER_ARRAY);
+            return EMPTY_CARRIER_ARRAY;
         } else {
-            return Arrays.asList(excludeNullableElementsFromArray(searchResultWithNullableElems));
+            return excludeNullableElementsFromArray(searchResultWithNullableElems);
         }
     }
 

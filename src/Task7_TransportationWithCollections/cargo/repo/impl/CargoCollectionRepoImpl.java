@@ -30,14 +30,14 @@ public class CargoCollectionRepoImpl implements CargoRepo {
     }
 
     @Override
-    public List<Cargo> getByName(String name) {
+    public Cargo[] getByName(String name) {
         List<Cargo> result = new ArrayList<>();
         for (Cargo cargo : cargoList) {
             if (cargo != null && Objects.equals(cargo.getName(), name)) {
                 result.add(cargo);
             }
         }
-        return result;
+        return result.toArray(new Cargo[0]);
     }
 
     @Override

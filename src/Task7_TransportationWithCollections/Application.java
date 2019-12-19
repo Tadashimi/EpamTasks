@@ -1,33 +1,49 @@
 package Task7_TransportationWithCollections;
 
+import Task7_TransportationWithCollections.cargo.domain.Cargo;
 import Task7_TransportationWithCollections.cargo.domain.ClothersCargo;
 import Task7_TransportationWithCollections.cargo.domain.FoodCargo;
+import Task7_TransportationWithCollections.cargo.repo.CargoRepo;
+import Task7_TransportationWithCollections.cargo.repo.impl.CargoCollectionRepoImpl;
 import Task7_TransportationWithCollections.cargo.service.impl.CargoServiceImpl;
 import Task7_TransportationWithCollections.carrier.domain.Carrier;
 import Task7_TransportationWithCollections.carrier.domain.CarrierType;
+import Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
+import Task7_TransportationWithCollections.carrier.repo.impl.CarrierCollectionRepoImpl;
 import Task7_TransportationWithCollections.carrier.service.impl.CarrierServiceImpl;
-import Task7_TransportationWithCollections.storage.Storage;
 import Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.transportation.repo.TransportationRepo;
+import Task7_TransportationWithCollections.transportation.repo.impl.TransportationCollectionRepoImpl;
 import Task7_TransportationWithCollections.transportation.service.impl.TransportationServiceImpl;
 
 import java.util.Date;
 
 public class Application {
+    private static final String SEPARATOR = "======================================================================";
+
     public static void main(String[] args) {
         ApplicationDemo applicationDemo = new ApplicationDemo();
         applicationDemo.addSampleData();
+        System.out.println(SEPARATOR);
         applicationDemo.findByIdDemo();
+        System.out.println(SEPARATOR);
         applicationDemo.findByNameDemo();
+        System.out.println(SEPARATOR);
         applicationDemo.deleteByIdDemo();
     }
 
     private static class ApplicationDemo {
-        private Storage storage = new Storage();
-        private CargoServiceImpl cargoService = new CargoServiceImpl();
-        private CarrierServiceImpl carrierService = new CarrierServiceImpl();
-        private TransportationServiceImpl transportationService = new TransportationServiceImpl();
+        private CargoRepo cargoRepo = new CargoCollectionRepoImpl();
+        private CargoServiceImpl cargoService = new CargoServiceImpl(cargoRepo);
+
+        private CarrierRepo carrierRepo = new CarrierCollectionRepoImpl();
+        private CarrierServiceImpl carrierService = new CarrierServiceImpl(carrierRepo);
+
+        private TransportationRepo transportationRepo = new TransportationCollectionRepoImpl();
+        private TransportationServiceImpl transportationService = new TransportationServiceImpl(transportationRepo);
 
         public void addSampleData() {
+            System.out.println("Adding data...");
             FoodCargo foodCargo = new FoodCargo();
             foodCargo.setName("Apple");
             foodCargo.setExpirationDate(new Date(2021, 10, 15));
@@ -72,24 +88,30 @@ public class Application {
             transportationService.add(transportation2);
         }
 
-        public void findByIdDemo(){
-            cargoService.getById(1L);
+        public void findByIdDemo() {
+            System.out.println("GetById examples:");
+            System.out.println("Cargo: " + cargoService.getById(1L));
+
             cargoService.getById(null);
             cargoService.getById(10L);
 
-            carrierService.getById(3L);
+            System.out.println("Carrier: " + carrierService.getById(3L));
 
-            transportationService.getById(6L);
+            System.out.println("Transportation: " + transportationService.getById(6L));
         }
 
         public void findByNameDemo() {
-            cargoService.getByName("Apple");
+            System.out.println("GetByName examples:");
+            for (Cargo cargo : cargoService.getByName("Apple")) {
+                System.out.println(cargo);
+            }
 
             carrierService.getByName(null);
             carrierService.getByName("Apple");
         }
 
         public void deleteByIdDemo() {
+            System.out.println("DeleteById examples:");
             cargoService.deleteById(1L);
             cargoService.deleteById(null);
             cargoService.deleteById(10L);

@@ -5,8 +5,6 @@ import Task7_TransportationWithCollections.cargo.repo.CargoRepo;
 import Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
 import Task7_TransportationWithCollections.storage.IdGenerator;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 import static Task7_TransportationWithCollections.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
@@ -41,13 +39,13 @@ public class CargoArrayRepoImpl implements CargoRepo {
     }
 
     @Override
-    public List<Cargo> getByName(String name) {
+    public Cargo[] getByName(String name) {
         Cargo[] searchResultWithNullableElems = getByNameIncludingNullElements(name);
         if (searchResultWithNullableElems == null
                 || searchResultWithNullableElems.length == 0) {
-            return Arrays.asList(EMPTY_CARGO_ARRAY);
+            return EMPTY_CARGO_ARRAY;
         } else {
-            return Arrays.asList(excludeNullableElementsFromArray(searchResultWithNullableElems));
+            return excludeNullableElementsFromArray(searchResultWithNullableElems);
         }
     }
 

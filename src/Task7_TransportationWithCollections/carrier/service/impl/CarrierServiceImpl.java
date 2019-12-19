@@ -1,27 +1,21 @@
 package Task7_TransportationWithCollections.carrier.service.impl;
 
 import Task7_TransportationWithCollections.carrier.domain.Carrier;
-import Task7_TransportationWithCollections.carrier.repo.impl.CarrierCollectionRepoImpl;
+import Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
 import Task7_TransportationWithCollections.carrier.service.CarrierService;
-
-import java.util.List;
 
 public class CarrierServiceImpl implements CarrierService {
 
-    private final CarrierCollectionRepoImpl carrierCollectionRepo;
+    private final CarrierRepo carrierRepo;
 
-    public CarrierServiceImpl() {
-        carrierCollectionRepo = new CarrierCollectionRepoImpl();
-    }
-
-    public CarrierServiceImpl(CarrierCollectionRepoImpl carrierCollectionRepo) {
-        this.carrierCollectionRepo = carrierCollectionRepo;
+    public CarrierServiceImpl(CarrierRepo carrierRepo) {
+        this.carrierRepo = carrierRepo;
     }
 
     @Override
     public void add(Carrier carrier) {
         if (carrier != null) {
-            carrierCollectionRepo.add(carrier);
+            carrierRepo.add(carrier);
             System.out.println("Carrier was added:\n" + carrier.toString());
         } else {
             System.out.println("Carrier was not added. Reason: carrier is null.");
@@ -31,7 +25,7 @@ public class CarrierServiceImpl implements CarrierService {
     @Override
     public Carrier getById(Long id) {
         if (id != null) {
-            return carrierCollectionRepo.getById(id);
+            return carrierRepo.getById(id);
         }
 
         System.out.println("Carrier was not found: id is null.");
@@ -39,17 +33,17 @@ public class CarrierServiceImpl implements CarrierService {
     }
 
     @Override
-    public List<Carrier> getByName(String name) {
+    public Carrier[] getByName(String name) {
         if (name == null) {
             System.out.println("Warning: name is null.");
         }
-        return carrierCollectionRepo.getByName(name);
+        return carrierRepo.getByName(name);
     }
 
     @Override
     public boolean deleteById(Long id) {
         if (id != null) {
-            if (carrierCollectionRepo.deleteById(id)) {
+            if (carrierRepo.deleteById(id)) {
                 System.out.println("Carrier was deleted.");
                 return true;
             }

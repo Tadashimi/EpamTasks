@@ -12,3 +12,5 @@ Task 5. Модель "Перевозки" с отдельным генерато
 Task 6. Модель "Перевозки" с repo и service.
 
 Task 7. Модель "Перевозки" с ColectionRepo и service.
+
+Task 8. Модель "Перевозки" с update и сортировкой Cargo.

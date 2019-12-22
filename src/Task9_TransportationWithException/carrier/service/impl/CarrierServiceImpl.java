@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARRIER_IS_USED_IN_TRANSPORTATION;
+import static Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARRIER_IS_USED_IN_TRANSPORTATION_ERROR;
 
 public class CarrierServiceImpl implements CarrierService {
 
@@ -56,7 +56,7 @@ public class CarrierServiceImpl implements CarrierService {
         }
 
 
-        throw new CarrierDeleteException(CARRIER_DELETE_ERROR_CODE, CARRIER_IS_USED_IN_TRANSPORTATION);
+        throw new CarrierDeleteException(CARRIER_DELETE_ERROR_CODE, CARRIER_IS_USED_IN_TRANSPORTATION_ERROR);
     }
 
     @Override

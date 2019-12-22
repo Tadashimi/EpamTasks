@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARGO_IS_USED_IN_TRANSPORTATION;
+import static Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARGO_IS_USED_IN_TRANSPORTATION_ERROR;
 
 public class CargoServiceImpl implements CargoService {
 
@@ -55,7 +55,7 @@ public class CargoServiceImpl implements CargoService {
             return cargoRepo.deleteById(id);
         }
 
-        throw new CargoDeleteException(CARGO_DELETE_ERROR_CODE, CARGO_IS_USED_IN_TRANSPORTATION);
+        throw new CargoDeleteException(CARGO_DELETE_ERROR_CODE, CARGO_IS_USED_IN_TRANSPORTATION_ERROR);
     }
 
     @Override

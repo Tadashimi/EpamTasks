@@ -8,12 +8,12 @@ public interface CommonService<T> {
 
     void printAll();
 
-    void add(T t);
+    void add(T entity);
 
     T getById(Long id);
 
     List<T> getAll();
 
-    void update(T t);
+    void update(T entity);
 
 }

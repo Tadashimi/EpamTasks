@@ -6,12 +6,12 @@ public interface CommonRepo<T> {
 
     boolean deleteById(long id);
 
-    void add(T t);
+    void add(T entity);
 
     T getById(long id);
 
     List<T> getAll();
 
-    void update(T cargo);
+    void update(T entity);
 
 }

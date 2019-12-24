@@ -1,8 +1,10 @@
 package Task10_TransportationWithGenerics.common.business.service;
 
+import Task10_TransportationWithGenerics.common.business.domain.BaseEntity;
+
 import java.util.List;
 
-public interface CommonService<T> {
+public interface CommonService<T extends BaseEntity> {
 
     boolean deleteById(Long id);
 

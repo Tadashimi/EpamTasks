@@ -1,0 +1,18 @@
+-----CARGOES BEGIN-----
+Fruits|1000|FOOD|10.01.2020|10
+Vegetables|500|FOOD|20.01.2020|15
+Bread|100|FOOD|07.01.2020|20
+Skirt|20|CLOTHERS|S|Cotton
+Dress|40|CLOTHERS|M|Linen
+Shoes|100|CLOTHERS|36|Leatherette
+-----CARGOES END-----
+-----CARRIERS BEGIN-----
+The best carrier|Lenin Str.49A|CAR
+The cheapest carrier|Gagarin Str.1/5|TRAIN
+The fastest carrir|Nevskiy Str.12|PLANE
+-----CARRIERS END-----
+-----TRANSPORTATIONS BEGIN-----
+Description#1|Bilbo B.|20.12.2019
+Description#2|Frodo B.|01.10.2019
+Description#3|Aragorn|24.08.2018
+-----TRANSPORTATIONS END-----

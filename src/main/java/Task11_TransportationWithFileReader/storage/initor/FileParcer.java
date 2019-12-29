@@ -48,9 +48,8 @@ public class FileParcer {
     }
 
     public static void parseFile(String filePath) {
-        try {
-            File fileWithData = new File(filePath);
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileWithData));
+        File fileWithData = new File(filePath);
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileWithData))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 switch (currentState) {

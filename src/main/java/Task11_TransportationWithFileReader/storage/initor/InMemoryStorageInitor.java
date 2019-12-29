@@ -134,7 +134,7 @@ public class InMemoryStorageInitor implements StorageInitor {
         carrierService.addAll(FileParcer.getCarrierListFromFile());
         transportationService.addAll(FileParcer.getTransportationListFromFile());
 
-        //appendTransportationsToCargos();
+        appendTransportationsToCargos();
     }
 
 }

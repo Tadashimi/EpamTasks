@@ -1,8 +1,8 @@
-package main.java.Task7_TransportationWithCollections.carrier.domain;
+package Task7_TransportationWithCollections.carrier.domain;
 
 
-import main.java.Task7_TransportationWithCollections.common.business.domain.BaseEntity;
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.common.business.domain.BaseEntity;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
 
 public class Carrier extends BaseEntity {
 

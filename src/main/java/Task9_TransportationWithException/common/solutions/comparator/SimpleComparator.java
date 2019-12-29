@@ -1,4 +1,4 @@
-package main.java.Task9_TransportationWithException.common.solutions.comparator;
+package  Task9_TransportationWithException.common.solutions.comparator;
 
 import java.util.Comparator;
 

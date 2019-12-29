@@ -1,7 +1,7 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.transportation.service;
+package  Task8_TransportationWithUpdateAndCompare.transportation.service;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.common.business.service.CommonService;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
+import  Task8_TransportationWithUpdateAndCompare.common.business.service.CommonService;
+import  Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
 
 public interface TransportationService extends CommonService {
 

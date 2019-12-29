@@ -1,4 +1,4 @@
-package main.java.Task6_TransportationWithRepoAndService.storage;
+package Task6_TransportationWithRepoAndService.storage;
 
 public final class IdGenerator {
 

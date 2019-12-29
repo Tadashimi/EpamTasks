@@ -1,4 +1,4 @@
-package main.java.Task9_TransportationWithException.storage;
+package  Task9_TransportationWithException.storage;
 
 public final class IdGenerator {
 

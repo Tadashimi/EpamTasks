@@ -1,4 +1,4 @@
-package main.java.Task6_TransportationWithRepoAndService.carrier.domain;
+package Task6_TransportationWithRepoAndService.carrier.domain;
 
 public enum CarrierType {
     SHIP,

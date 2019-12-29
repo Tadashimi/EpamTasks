@@ -1,4 +1,4 @@
-package main.java.Task9_TransportationWithException.common.business.repo;
+package  Task9_TransportationWithException.common.business.repo;
 
 public interface CommonRepo {
 

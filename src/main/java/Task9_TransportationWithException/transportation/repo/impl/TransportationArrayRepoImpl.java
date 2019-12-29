@@ -1,17 +1,17 @@
-package main.java.Task9_TransportationWithException.transportation.repo.impl;
+package  Task9_TransportationWithException.transportation.repo.impl;
 
 
-import main.java.Task9_TransportationWithException.common.solutions.utils.ArrayUtils;
-import main.java.Task9_TransportationWithException.storage.IdGenerator;
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
-import main.java.Task9_TransportationWithException.transportation.repo.TransportationRepo;
+import  Task9_TransportationWithException.common.solutions.utils.ArrayUtils;
+import  Task9_TransportationWithException.storage.IdGenerator;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.transportation.repo.TransportationRepo;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static main.java.Task9_TransportationWithException.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
-import static main.java.Task9_TransportationWithException.storage.Storage.transportationArray;
-import static main.java.Task9_TransportationWithException.storage.Storage.transportationIndex;
+import static  Task9_TransportationWithException.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
+import static  Task9_TransportationWithException.storage.Storage.transportationArray;
+import static  Task9_TransportationWithException.storage.Storage.transportationIndex;
 
 public class TransportationArrayRepoImpl implements TransportationRepo {
 

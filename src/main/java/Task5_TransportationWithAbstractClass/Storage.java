@@ -1,13 +1,13 @@
-package main.java.Task5_TransportationWithAbstractClass;
+package Task5_TransportationWithAbstractClass;
 
-import main.java.Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
-import main.java.Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
-import main.java.Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
-import main.java.Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
+import Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
+import Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
+import Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
+import Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
 
 import java.util.Objects;
 
-import static main.java.Task5_TransportationWithAbstractClass.Constants.INITIAL_ARRAY_CAPACITY;
+import static Task5_TransportationWithAbstractClass.Constants.INITIAL_ARRAY_CAPACITY;
 
 public class Storage {
     private static Cargo[] allCargoes = new Cargo[INITIAL_ARRAY_CAPACITY];

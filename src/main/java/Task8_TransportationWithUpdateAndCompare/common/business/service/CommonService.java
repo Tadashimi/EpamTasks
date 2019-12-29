@@ -1,4 +1,4 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.common.business.service;
+package Task8_TransportationWithUpdateAndCompare.common.business.service;
 
 public interface CommonService {
 

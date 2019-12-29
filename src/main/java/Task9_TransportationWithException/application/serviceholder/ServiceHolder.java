@@ -1,20 +1,20 @@
-package main.java.Task9_TransportationWithException.application.serviceholder;
+package  Task9_TransportationWithException.application.serviceholder;
 
-import main.java.Task9_TransportationWithException.cargo.repo.CargoRepo;
-import main.java.Task9_TransportationWithException.cargo.repo.impl.CargoArrayRepoImpl;
-import main.java.Task9_TransportationWithException.cargo.repo.impl.CargoCollectionRepoImpl;
-import main.java.Task9_TransportationWithException.cargo.service.CargoService;
-import main.java.Task9_TransportationWithException.cargo.service.impl.CargoServiceImpl;
-import main.java.Task9_TransportationWithException.carrier.repo.CarrierRepo;
-import main.java.Task9_TransportationWithException.carrier.repo.impl.CarrierArrayRepoImpl;
-import main.java.Task9_TransportationWithException.carrier.repo.impl.CarrierCollectionRepoImpl;
-import main.java.Task9_TransportationWithException.carrier.service.CarrierService;
-import main.java.Task9_TransportationWithException.carrier.service.impl.CarrierServiceImpl;
-import main.java.Task9_TransportationWithException.transportation.repo.TransportationRepo;
-import main.java.Task9_TransportationWithException.transportation.repo.impl.TransportationArrayRepoImpl;
-import main.java.Task9_TransportationWithException.transportation.repo.impl.TransportationCollectionRepoImpl;
-import main.java.Task9_TransportationWithException.transportation.service.TransportationService;
-import main.java.Task9_TransportationWithException.transportation.service.impl.TransportationServiceImpl;
+import  Task9_TransportationWithException.cargo.repo.CargoRepo;
+import  Task9_TransportationWithException.cargo.repo.impl.CargoArrayRepoImpl;
+import  Task9_TransportationWithException.cargo.repo.impl.CargoCollectionRepoImpl;
+import  Task9_TransportationWithException.cargo.service.CargoService;
+import  Task9_TransportationWithException.cargo.service.impl.CargoServiceImpl;
+import  Task9_TransportationWithException.carrier.repo.CarrierRepo;
+import  Task9_TransportationWithException.carrier.repo.impl.CarrierArrayRepoImpl;
+import  Task9_TransportationWithException.carrier.repo.impl.CarrierCollectionRepoImpl;
+import  Task9_TransportationWithException.carrier.service.CarrierService;
+import  Task9_TransportationWithException.carrier.service.impl.CarrierServiceImpl;
+import  Task9_TransportationWithException.transportation.repo.TransportationRepo;
+import  Task9_TransportationWithException.transportation.repo.impl.TransportationArrayRepoImpl;
+import  Task9_TransportationWithException.transportation.repo.impl.TransportationCollectionRepoImpl;
+import  Task9_TransportationWithException.transportation.service.TransportationService;
+import  Task9_TransportationWithException.transportation.service.impl.TransportationServiceImpl;
 
 public final class ServiceHolder {
 

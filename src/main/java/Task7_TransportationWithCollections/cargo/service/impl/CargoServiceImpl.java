@@ -1,8 +1,8 @@
-package main.java.Task7_TransportationWithCollections.cargo.service.impl;
+package Task7_TransportationWithCollections.cargo.service.impl;
 
-import main.java.Task7_TransportationWithCollections.cargo.domain.Cargo;
-import main.java.Task7_TransportationWithCollections.cargo.repo.CargoRepo;
-import main.java.Task7_TransportationWithCollections.cargo.service.CargoService;
+import Task7_TransportationWithCollections.cargo.domain.Cargo;
+import Task7_TransportationWithCollections.cargo.repo.CargoRepo;
+import Task7_TransportationWithCollections.cargo.service.CargoService;
 
 public class CargoServiceImpl implements CargoService {
 

@@ -1,16 +1,16 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.application;
+package Task8_TransportationWithUpdateAndCompare.application;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.application.serviceholder.ServiceHolder;
-import main.java.Task8_TransportationWithUpdateAndCompare.application.serviceholder.StorageType;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.FoodCargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.sortCargoList.CompareField;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
-import main.java.Task8_TransportationWithUpdateAndCompare.common.solutions.utils.CollectionUtils;
-import main.java.Task8_TransportationWithUpdateAndCompare.storage.initor.InMemoryStorageInitor;
-import main.java.Task8_TransportationWithUpdateAndCompare.storage.initor.StorageInitor;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.service.TransportationService;
+import Task8_TransportationWithUpdateAndCompare.application.serviceholder.ServiceHolder;
+import Task8_TransportationWithUpdateAndCompare.application.serviceholder.StorageType;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.FoodCargo;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.cargoListComparator.CompareField;
+import Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
+import Task8_TransportationWithUpdateAndCompare.common.solutions.utils.CollectionUtils;
+import Task8_TransportationWithUpdateAndCompare.storage.initor.InMemoryStorageInitor;
+import Task8_TransportationWithUpdateAndCompare.storage.initor.StorageInitor;
+import Task8_TransportationWithUpdateAndCompare.transportation.service.TransportationService;
 
 public class Application {
     private static final String SEPARATOR = "======================================================================";

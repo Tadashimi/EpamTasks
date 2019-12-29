@@ -1,16 +1,16 @@
-package main.java.Task10_TransportationWithGenerics.carrier.repo.impl;
+package  Task10_TransportationWithGenerics.carrier.repo.impl;
 
 
-import main.java.Task10_TransportationWithGenerics.carrier.domain.Carrier;
-import main.java.Task10_TransportationWithGenerics.carrier.repo.CarrierRepo;
-import main.java.Task10_TransportationWithGenerics.storage.IdGenerator;
+import  Task10_TransportationWithGenerics.carrier.domain.Carrier;
+import  Task10_TransportationWithGenerics.carrier.repo.CarrierRepo;
+import  Task10_TransportationWithGenerics.storage.IdGenerator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-import static main.java.Task10_TransportationWithGenerics.storage.Storage.carrierCollection;
+import static  Task10_TransportationWithGenerics.storage.Storage.carrierCollection;
 
 public class CarrierCollectionRepoImpl implements CarrierRepo {
 

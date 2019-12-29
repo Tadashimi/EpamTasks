@@ -1,17 +1,17 @@
-package main.java.Task9_TransportationWithException.cargo.repo.impl;
+package  Task9_TransportationWithException.cargo.repo.impl;
 
 
-import main.java.Task9_TransportationWithException.cargo.domain.Cargo;
-import main.java.Task9_TransportationWithException.cargo.search.CargoSearchCondition;
-import main.java.Task9_TransportationWithException.common.solutions.utils.ArrayUtils;
-import main.java.Task9_TransportationWithException.common.solutions.utils.CollectionUtils;
-import main.java.Task9_TransportationWithException.storage.IdGenerator;
+import  Task9_TransportationWithException.cargo.domain.Cargo;
+import  Task9_TransportationWithException.cargo.search.CargoSearchCondition;
+import  Task9_TransportationWithException.common.solutions.utils.ArrayUtils;
+import  Task9_TransportationWithException.common.solutions.utils.CollectionUtils;
+import  Task9_TransportationWithException.storage.IdGenerator;
 
 import java.util.*;
 
-import static main.java.Task9_TransportationWithException.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
-import static main.java.Task9_TransportationWithException.storage.Storage.cargoArray;
-import static main.java.Task9_TransportationWithException.storage.Storage.cargoIndex;
+import static  Task9_TransportationWithException.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
+import static  Task9_TransportationWithException.storage.Storage.cargoArray;
+import static  Task9_TransportationWithException.storage.Storage.cargoIndex;
 
 public class CargoArrayRepoImpl extends CommonCargoRepo {
 

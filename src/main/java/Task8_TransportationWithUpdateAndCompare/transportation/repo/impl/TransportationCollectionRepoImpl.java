@@ -1,12 +1,12 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.transportation.repo.impl;
+package  Task8_TransportationWithUpdateAndCompare.transportation.repo.impl;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.repo.TransportationRepo;
+import  Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
+import  Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
+import  Task8_TransportationWithUpdateAndCompare.transportation.repo.TransportationRepo;
 
 import java.util.Objects;
 
-import static main.java.Task8_TransportationWithUpdateAndCompare.storage.Storage.transportationList;
+import static  Task8_TransportationWithUpdateAndCompare.storage.Storage.transportationList;
 
 public class TransportationCollectionRepoImpl implements TransportationRepo {
 

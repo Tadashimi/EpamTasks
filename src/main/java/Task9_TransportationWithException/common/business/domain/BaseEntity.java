@@ -1,4 +1,4 @@
-package main.java.Task9_TransportationWithException.common.business.domain;
+package  Task9_TransportationWithException.common.business.domain;
 
 public abstract class BaseEntity {
 

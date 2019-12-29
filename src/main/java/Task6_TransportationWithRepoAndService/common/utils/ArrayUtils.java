@@ -1,4 +1,4 @@
-package main.java.Task6_TransportationWithRepoAndService.common.utils;
+package Task6_TransportationWithRepoAndService.common.utils;
 
 public final class ArrayUtils {
 

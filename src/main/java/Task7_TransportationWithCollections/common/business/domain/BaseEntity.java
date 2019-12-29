@@ -1,4 +1,4 @@
-package main.java.Task7_TransportationWithCollections.common.business.domain;
+package Task7_TransportationWithCollections.common.business.domain;
 
 public abstract class BaseEntity {
 

@@ -1,17 +1,17 @@
-package main.java.Task10_TransportationWithGenerics.cargo.repo.impl;
+package  Task10_TransportationWithGenerics.cargo.repo.impl;
 
-import main.java.Task10_TransportationWithGenerics.cargo.domain.Cargo;
-import main.java.Task10_TransportationWithGenerics.cargo.domain.CargoField;
-import main.java.Task10_TransportationWithGenerics.cargo.repo.CargoRepo;
-import main.java.Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
-import main.java.Task10_TransportationWithGenerics.common.solutions.comparator.SimpleComparator;
+import  Task10_TransportationWithGenerics.cargo.domain.Cargo;
+import  Task10_TransportationWithGenerics.cargo.domain.CargoField;
+import  Task10_TransportationWithGenerics.cargo.repo.CargoRepo;
+import  Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
+import  Task10_TransportationWithGenerics.common.solutions.comparator.SimpleComparator;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import static main.java.Task10_TransportationWithGenerics.cargo.domain.CargoField.NAME;
-import static main.java.Task10_TransportationWithGenerics.cargo.domain.CargoField.WEIGHT;
+import static  Task10_TransportationWithGenerics.cargo.domain.CargoField.NAME;
+import static  Task10_TransportationWithGenerics.cargo.domain.CargoField.WEIGHT;
 
 public abstract class CommonCargoRepo implements CargoRepo {
 

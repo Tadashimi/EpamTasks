@@ -1,7 +1,7 @@
-package main.java.Task10_TransportationWithGenerics.cargo.domain;
+package  Task10_TransportationWithGenerics.cargo.domain;
 
-import main.java.Task10_TransportationWithGenerics.common.business.domain.BaseEntity;
-import main.java.Task10_TransportationWithGenerics.transportation.domain.Transportation;
+import  Task10_TransportationWithGenerics.common.business.domain.BaseEntity;
+import  Task10_TransportationWithGenerics.transportation.domain.Transportation;
 
 import java.util.List;
 

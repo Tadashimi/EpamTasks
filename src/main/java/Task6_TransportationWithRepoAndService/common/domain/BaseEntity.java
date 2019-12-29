@@ -1,4 +1,4 @@
-package main.java.Task6_TransportationWithRepoAndService.common.domain;
+package Task6_TransportationWithRepoAndService.common.domain;
 
 public abstract class BaseEntity {
     protected Long id;

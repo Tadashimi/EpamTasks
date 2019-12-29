@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.application.serviceholder;
+package  Task10_TransportationWithGenerics.application.serviceholder;
 
 public enum StorageType {
     ARRAY, COLLECTION

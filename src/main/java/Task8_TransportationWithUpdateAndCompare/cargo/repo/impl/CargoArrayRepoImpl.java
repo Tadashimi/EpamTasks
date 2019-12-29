@@ -1,14 +1,14 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.cargo.repo.impl;
+package Task8_TransportationWithUpdateAndCompare.cargo.repo.impl;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.repo.CargoRepo;
-import main.java.Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
-import main.java.Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
+import Task8_TransportationWithUpdateAndCompare.cargo.repo.CargoRepo;
+import Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
+import Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
 
 import java.util.Objects;
 
-import static main.java.Task8_TransportationWithUpdateAndCompare.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
-import static main.java.Task8_TransportationWithUpdateAndCompare.storage.Storage.*;
+import static Task8_TransportationWithUpdateAndCompare.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
+import static Task8_TransportationWithUpdateAndCompare.storage.Storage.*;
 
 public class CargoArrayRepoImpl implements CargoRepo {
 

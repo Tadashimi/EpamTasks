@@ -1,7 +1,7 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.cargo.repo;
+package Task8_TransportationWithUpdateAndCompare.cargo.repo;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.common.business.repo.CommonRepo;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
+import Task8_TransportationWithUpdateAndCompare.common.business.repo.CommonRepo;
 
 public interface CargoRepo extends CommonRepo {
 

@@ -1,10 +1,10 @@
-package main.java.Task10_TransportationWithGenerics.cargo.service;
+package  Task10_TransportationWithGenerics.cargo.service;
 
-import main.java.Task10_TransportationWithGenerics.cargo.domain.Cargo;
-import main.java.Task10_TransportationWithGenerics.cargo.exception.unckecked.CargoDeleteConstraintViolationException;
-import main.java.Task10_TransportationWithGenerics.cargo.repo.CargoRepo;
-import main.java.Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
-import main.java.Task10_TransportationWithGenerics.transportation.domain.Transportation;
+import  Task10_TransportationWithGenerics.cargo.domain.Cargo;
+import  Task10_TransportationWithGenerics.cargo.exception.unckecked.CargoDeleteConstraintViolationException;
+import  Task10_TransportationWithGenerics.cargo.repo.CargoRepo;
+import  Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
+import  Task10_TransportationWithGenerics.transportation.domain.Transportation;
 
 import java.util.Arrays;
 import java.util.Collections;

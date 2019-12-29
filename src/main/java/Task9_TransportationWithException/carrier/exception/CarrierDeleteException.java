@@ -1,6 +1,6 @@
-package main.java.Task9_TransportationWithException.carrier.exception;
+package  Task9_TransportationWithException.carrier.exception;
 
-import main.java.Task9_TransportationWithException.common.solutions.exception.TransportationException;
+import  Task9_TransportationWithException.common.solutions.exception.TransportationException;
 
 public class CarrierDeleteException extends TransportationException {
 

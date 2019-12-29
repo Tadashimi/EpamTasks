@@ -1,4 +1,4 @@
-package main.java.Task7_TransportationWithCollections.storage;
+package Task7_TransportationWithCollections.storage;
 
 public final class IdGenerator {
 

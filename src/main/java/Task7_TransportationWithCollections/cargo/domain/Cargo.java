@@ -1,7 +1,7 @@
-package main.java.Task7_TransportationWithCollections.cargo.domain;
+package Task7_TransportationWithCollections.cargo.domain;
 
-import main.java.Task7_TransportationWithCollections.common.business.domain.BaseEntity;
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.common.business.domain.BaseEntity;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
 
 import java.util.Arrays;
 

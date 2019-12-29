@@ -1,9 +1,9 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.carrier.service.impl;
+package Task8_TransportationWithUpdateAndCompare.carrier.service.impl;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.repo.CarrierRepo;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
-import main.java.Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
+import Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
+import Task8_TransportationWithUpdateAndCompare.carrier.repo.CarrierRepo;
+import Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
+import Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
 
 import java.util.Arrays;
 import java.util.Collections;

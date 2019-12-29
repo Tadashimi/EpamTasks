@@ -1,13 +1,13 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.storage.initor;
+package Task8_TransportationWithUpdateAndCompare.storage.initor;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.application.serviceholder.ServiceHolder;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.ClothersCargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.FoodCargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.service.TransportationService;
+import Task8_TransportationWithUpdateAndCompare.application.serviceholder.ServiceHolder;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.ClothersCargo;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.FoodCargo;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
+import Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
+import Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
+import Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
+import Task8_TransportationWithUpdateAndCompare.transportation.service.TransportationService;
 
 import java.util.Date;
 

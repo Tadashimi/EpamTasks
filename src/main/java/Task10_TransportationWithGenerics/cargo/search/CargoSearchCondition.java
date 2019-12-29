@@ -1,7 +1,7 @@
-package main.java.Task10_TransportationWithGenerics.cargo.search;
+package  Task10_TransportationWithGenerics.cargo.search;
 
-import main.java.Task10_TransportationWithGenerics.cargo.domain.CargoField;
-import main.java.Task10_TransportationWithGenerics.common.solutions.search.OrderType;
+import  Task10_TransportationWithGenerics.cargo.domain.CargoField;
+import  Task10_TransportationWithGenerics.common.solutions.search.OrderType;
 
 import java.util.Set;
 

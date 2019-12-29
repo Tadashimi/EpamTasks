@@ -1,8 +1,8 @@
-package main.java.Task9_TransportationWithException.cargo.service;
+package  Task9_TransportationWithException.cargo.service;
 
-import main.java.Task9_TransportationWithException.cargo.domain.Cargo;
-import main.java.Task9_TransportationWithException.cargo.search.CargoSearchCondition;
-import main.java.Task9_TransportationWithException.common.business.service.CommonService;
+import  Task9_TransportationWithException.cargo.domain.Cargo;
+import  Task9_TransportationWithException.cargo.search.CargoSearchCondition;
+import  Task9_TransportationWithException.common.business.service.CommonService;
 
 import java.util.List;
 

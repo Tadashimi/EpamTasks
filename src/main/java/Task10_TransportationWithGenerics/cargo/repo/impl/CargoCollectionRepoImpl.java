@@ -1,14 +1,14 @@
-package main.java.Task10_TransportationWithGenerics.cargo.repo.impl;
+package  Task10_TransportationWithGenerics.cargo.repo.impl;
 
 
-import main.java.Task10_TransportationWithGenerics.cargo.domain.Cargo;
-import main.java.Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
-import main.java.Task10_TransportationWithGenerics.common.solutions.utils.CollectionUtils;
-import main.java.Task10_TransportationWithGenerics.storage.IdGenerator;
+import  Task10_TransportationWithGenerics.cargo.domain.Cargo;
+import  Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
+import  Task10_TransportationWithGenerics.common.solutions.utils.CollectionUtils;
+import  Task10_TransportationWithGenerics.storage.IdGenerator;
 
 import java.util.*;
 
-import static main.java.Task10_TransportationWithGenerics.storage.Storage.cargoCollection;
+import static  Task10_TransportationWithGenerics.storage.Storage.cargoCollection;
 
 public class CargoCollectionRepoImpl extends CommonCargoRepo {
 

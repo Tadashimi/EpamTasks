@@ -1,8 +1,8 @@
-package main.java.Task5_TransportationWithAbstractClass.transportation.domain;
+package Task5_TransportationWithAbstractClass.transportation.domain;
 
-import main.java.Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
-import main.java.Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
-import main.java.Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
+import Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
+import Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
+import Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
 
 import java.util.Date;
 

@@ -1,7 +1,7 @@
-package main.java.Task9_TransportationWithException.cargo.domain;
+package  Task9_TransportationWithException.cargo.domain;
 
-import main.java.Task9_TransportationWithException.common.business.domain.BaseEntity;
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.common.business.domain.BaseEntity;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
 
 import java.util.ArrayList;
 import java.util.List;

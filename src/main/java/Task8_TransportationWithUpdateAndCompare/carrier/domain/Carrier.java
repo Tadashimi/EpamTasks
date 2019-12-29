@@ -1,8 +1,8 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.carrier.domain;
+package Task8_TransportationWithUpdateAndCompare.carrier.domain;
 
 
-import main.java.Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
+import Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
+import Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
 
 public class Carrier extends BaseEntity {
 

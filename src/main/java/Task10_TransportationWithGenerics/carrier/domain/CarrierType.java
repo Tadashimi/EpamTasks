@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.carrier.domain;
+package  Task10_TransportationWithGenerics.carrier.domain;
 
 public enum CarrierType {
     SHIP,

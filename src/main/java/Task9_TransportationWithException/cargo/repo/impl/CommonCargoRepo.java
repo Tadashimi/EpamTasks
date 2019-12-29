@@ -1,17 +1,17 @@
-package main.java.Task9_TransportationWithException.cargo.repo.impl;
+package  Task9_TransportationWithException.cargo.repo.impl;
 
-import main.java.Task9_TransportationWithException.cargo.domain.Cargo;
-import main.java.Task9_TransportationWithException.cargo.domain.CargoField;
-import main.java.Task9_TransportationWithException.cargo.repo.CargoRepo;
-import main.java.Task9_TransportationWithException.cargo.search.CargoSearchCondition;
-import main.java.Task9_TransportationWithException.common.solutions.comparator.SimpleComparator;
+import  Task9_TransportationWithException.cargo.domain.Cargo;
+import  Task9_TransportationWithException.cargo.domain.CargoField;
+import  Task9_TransportationWithException.cargo.repo.CargoRepo;
+import  Task9_TransportationWithException.cargo.search.CargoSearchCondition;
+import  Task9_TransportationWithException.common.solutions.comparator.SimpleComparator;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import static main.java.Task9_TransportationWithException.cargo.domain.CargoField.NAME;
-import static main.java.Task9_TransportationWithException.cargo.domain.CargoField.WEIGHT;
+import static  Task9_TransportationWithException.cargo.domain.CargoField.NAME;
+import static  Task9_TransportationWithException.cargo.domain.CargoField.WEIGHT;
 
 public abstract class CommonCargoRepo implements CargoRepo {
 

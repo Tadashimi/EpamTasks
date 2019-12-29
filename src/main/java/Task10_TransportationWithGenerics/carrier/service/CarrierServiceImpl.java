@@ -1,9 +1,9 @@
-package main.java.Task10_TransportationWithGenerics.carrier.service;
+package  Task10_TransportationWithGenerics.carrier.service;
 
-import main.java.Task10_TransportationWithGenerics.carrier.domain.Carrier;
-import main.java.Task10_TransportationWithGenerics.carrier.exception.unchecked.CarrierDeleteConstraintViolationException;
-import main.java.Task10_TransportationWithGenerics.carrier.repo.CarrierRepo;
-import main.java.Task10_TransportationWithGenerics.transportation.domain.Transportation;
+import  Task10_TransportationWithGenerics.carrier.domain.Carrier;
+import  Task10_TransportationWithGenerics.carrier.exception.unchecked.CarrierDeleteConstraintViolationException;
+import  Task10_TransportationWithGenerics.carrier.repo.CarrierRepo;
+import  Task10_TransportationWithGenerics.transportation.domain.Transportation;
 
 import java.util.Arrays;
 import java.util.Collections;

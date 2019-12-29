@@ -1,4 +1,4 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.common.solutions.utils;
+package Task8_TransportationWithUpdateAndCompare.common.solutions.utils;
 
 public final class ArrayUtils {
 

@@ -1,7 +1,7 @@
-package main.java.Task9_TransportationWithException.transportation.repo;
+package  Task9_TransportationWithException.transportation.repo;
 
-import main.java.Task9_TransportationWithException.common.business.repo.CommonRepo;
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.common.business.repo.CommonRepo;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
 
 import java.util.List;
 

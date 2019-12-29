@@ -1,8 +1,8 @@
-package main.java.Task9_TransportationWithException.transportation.domain;
+package  Task9_TransportationWithException.transportation.domain;
 
-import main.java.Task9_TransportationWithException.cargo.domain.Cargo;
-import main.java.Task9_TransportationWithException.carrier.domain.Carrier;
-import main.java.Task9_TransportationWithException.common.business.domain.BaseEntity;
+import  Task9_TransportationWithException.cargo.domain.Cargo;
+import  Task9_TransportationWithException.carrier.domain.Carrier;
+import  Task9_TransportationWithException.common.business.domain.BaseEntity;
 
 import java.util.Date;
 

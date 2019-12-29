@@ -1,8 +1,8 @@
-package main.java.Task6_TransportationWithRepoAndService.transportation.domain;
+package Task6_TransportationWithRepoAndService.transportation.domain;
 
-import main.java.Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
-import main.java.Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
-import main.java.Task6_TransportationWithRepoAndService.common.domain.BaseEntity;
+import Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
+import Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
+import Task6_TransportationWithRepoAndService.common.domain.BaseEntity;
 
 import java.util.Date;
 

@@ -1,14 +1,14 @@
-package main.java.Task9_TransportationWithException.storage.initor.impl;
+package  Task9_TransportationWithException.storage.initor.impl;
 
-import main.java.Task9_TransportationWithException.application.serviceholder.ServiceHolder;
-import main.java.Task9_TransportationWithException.cargo.domain.ClothersCargo;
-import main.java.Task9_TransportationWithException.cargo.domain.FoodCargo;
-import main.java.Task9_TransportationWithException.cargo.service.CargoService;
-import main.java.Task9_TransportationWithException.carrier.domain.Carrier;
-import main.java.Task9_TransportationWithException.carrier.service.CarrierService;
-import main.java.Task9_TransportationWithException.storage.initor.StorageInitor;
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
-import main.java.Task9_TransportationWithException.transportation.service.TransportationService;
+import  Task9_TransportationWithException.application.serviceholder.ServiceHolder;
+import  Task9_TransportationWithException.cargo.domain.ClothersCargo;
+import  Task9_TransportationWithException.cargo.domain.FoodCargo;
+import  Task9_TransportationWithException.cargo.service.CargoService;
+import  Task9_TransportationWithException.carrier.domain.Carrier;
+import  Task9_TransportationWithException.carrier.service.CarrierService;
+import  Task9_TransportationWithException.storage.initor.StorageInitor;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.transportation.service.TransportationService;
 
 import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;

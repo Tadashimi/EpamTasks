@@ -1,14 +1,14 @@
-package main.java.Task6_TransportationWithRepoAndService.carrier.repo.impl;
+package Task6_TransportationWithRepoAndService.carrier.repo.impl;
 
-import main.java.Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
-import main.java.Task6_TransportationWithRepoAndService.carrier.repo.CarrierRepo;
-import main.java.Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
-import main.java.Task6_TransportationWithRepoAndService.storage.IdGenerator;
+import Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
+import Task6_TransportationWithRepoAndService.carrier.repo.CarrierRepo;
+import Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
+import Task6_TransportationWithRepoAndService.storage.IdGenerator;
 
 import java.util.Objects;
 
-import static main.java.Task6_TransportationWithRepoAndService.storage.Storage.carrierIndex;
-import static main.java.Task6_TransportationWithRepoAndService.storage.Storage.carriers;
+import static Task6_TransportationWithRepoAndService.storage.Storage.carrierIndex;
+import static Task6_TransportationWithRepoAndService.storage.Storage.carriers;
 
 public class CarrierRepoImpl implements CarrierRepo {
 

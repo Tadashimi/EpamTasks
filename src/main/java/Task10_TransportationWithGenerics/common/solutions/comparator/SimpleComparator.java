@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.common.solutions.comparator;
+package  Task10_TransportationWithGenerics.common.solutions.comparator;
 
 import java.util.Comparator;
 

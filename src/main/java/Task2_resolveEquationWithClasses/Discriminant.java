@@ -1,4 +1,4 @@
-package main.java.Task2_resolveEquationWithClasses;
+package Task2_resolveEquationWithClasses;
 
 public class Discriminant {
     public static final String ONE_SOLUTION = "oneSolution";

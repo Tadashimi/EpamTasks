@@ -1,4 +1,4 @@
-package main.java.Task9_TransportationWithException.common.solutions.utils;
+package  Task9_TransportationWithException.common.solutions.utils;
 
 import java.util.Collection;
 

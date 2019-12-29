@@ -1,17 +1,17 @@
-package main.java.Task9_TransportationWithException.cargo.service.impl;
+package  Task9_TransportationWithException.cargo.service.impl;
 
-import main.java.Task9_TransportationWithException.cargo.domain.Cargo;
-import main.java.Task9_TransportationWithException.cargo.exception.CargoDeleteException;
-import main.java.Task9_TransportationWithException.cargo.repo.CargoRepo;
-import main.java.Task9_TransportationWithException.cargo.search.CargoSearchCondition;
-import main.java.Task9_TransportationWithException.cargo.service.CargoService;
-import main.java.Task9_TransportationWithException.common.solutions.exception.TransportationException;
+import  Task9_TransportationWithException.cargo.domain.Cargo;
+import  Task9_TransportationWithException.cargo.exception.CargoDeleteException;
+import  Task9_TransportationWithException.cargo.repo.CargoRepo;
+import  Task9_TransportationWithException.cargo.search.CargoSearchCondition;
+import  Task9_TransportationWithException.cargo.service.CargoService;
+import  Task9_TransportationWithException.common.solutions.exception.TransportationException;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static main.java.Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARGO_IS_USED_IN_TRANSPORTATION_ERROR;
+import static  Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARGO_IS_USED_IN_TRANSPORTATION_ERROR;
 
 public class CargoServiceImpl implements CargoService {
 

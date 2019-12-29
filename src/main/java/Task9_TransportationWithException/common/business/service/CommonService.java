@@ -1,6 +1,6 @@
-package main.java.Task9_TransportationWithException.common.business.service;
+package  Task9_TransportationWithException.common.business.service;
 
-import main.java.Task9_TransportationWithException.common.solutions.exception.TransportationException;
+import  Task9_TransportationWithException.common.solutions.exception.TransportationException;
 
 public interface CommonService {
 

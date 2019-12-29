@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.cargo.domain;
+package  Task10_TransportationWithGenerics.cargo.domain;
 
 public class ClothersCargo extends Cargo {
 

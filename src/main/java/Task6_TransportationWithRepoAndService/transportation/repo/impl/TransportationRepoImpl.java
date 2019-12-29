@@ -1,12 +1,12 @@
-package main.java.Task6_TransportationWithRepoAndService.transportation.repo.impl;
+package Task6_TransportationWithRepoAndService.transportation.repo.impl;
 
-import main.java.Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
-import main.java.Task6_TransportationWithRepoAndService.storage.IdGenerator;
-import main.java.Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
-import main.java.Task6_TransportationWithRepoAndService.transportation.repo.TransportationRepo;
+import Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
+import Task6_TransportationWithRepoAndService.storage.IdGenerator;
+import Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
+import Task6_TransportationWithRepoAndService.transportation.repo.TransportationRepo;
 
-import static main.java.Task6_TransportationWithRepoAndService.storage.Storage.transportationIndex;
-import static main.java.Task6_TransportationWithRepoAndService.storage.Storage.transportations;
+import static Task6_TransportationWithRepoAndService.storage.Storage.transportationIndex;
+import static Task6_TransportationWithRepoAndService.storage.Storage.transportations;
 
 public class TransportationRepoImpl implements TransportationRepo {
 

@@ -1,7 +1,7 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain;
+package Task8_TransportationWithUpdateAndCompare.cargo.domain;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
+import Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
+import Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
 
 public abstract class Cargo extends BaseEntity {
 

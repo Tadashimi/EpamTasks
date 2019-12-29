@@ -1,6 +1,6 @@
-package main.java.Task6_TransportationWithRepoAndService.cargo.service;
+package Task6_TransportationWithRepoAndService.cargo.service;
 
-import main.java.Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
+import Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
 
 public interface CargoService {
     void addCargo(Cargo cargo);

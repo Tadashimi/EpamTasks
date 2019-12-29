@@ -1,8 +1,8 @@
-package main.java.Task7_TransportationWithCollections.transportation.domain;
+package Task7_TransportationWithCollections.transportation.domain;
 
-import main.java.Task7_TransportationWithCollections.cargo.domain.Cargo;
-import main.java.Task7_TransportationWithCollections.carrier.domain.Carrier;
-import main.java.Task7_TransportationWithCollections.common.business.domain.BaseEntity;
+import Task7_TransportationWithCollections.cargo.domain.Cargo;
+import Task7_TransportationWithCollections.carrier.domain.Carrier;
+import Task7_TransportationWithCollections.common.business.domain.BaseEntity;
 
 import java.util.Date;
 

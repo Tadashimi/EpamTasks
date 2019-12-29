@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.cargo.domain;
+package  Task10_TransportationWithGenerics.cargo.domain;
 
 import java.util.Date;
 

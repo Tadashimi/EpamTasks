@@ -1,10 +1,10 @@
-package main.java.Task5_TransportationWithAbstractClass;
+package Task5_TransportationWithAbstractClass;
 
-import main.java.Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
-import main.java.Task5_TransportationWithAbstractClass.cargo.domain.CargoType;
-import main.java.Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
-import main.java.Task5_TransportationWithAbstractClass.carrier.domain.CarrierType;
-import main.java.Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
+import Task5_TransportationWithAbstractClass.cargo.domain.Cargo;
+import Task5_TransportationWithAbstractClass.cargo.domain.CargoType;
+import Task5_TransportationWithAbstractClass.carrier.domain.Carrier;
+import Task5_TransportationWithAbstractClass.carrier.domain.CarrierType;
+import Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
 
 import java.util.Arrays;
 import java.util.Date;

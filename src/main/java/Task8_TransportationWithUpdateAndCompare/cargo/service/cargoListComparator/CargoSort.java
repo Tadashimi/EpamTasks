@@ -1,6 +1,6 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.sortCargoList;
+package Task8_TransportationWithUpdateAndCompare.cargo.service.cargoListComparator;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
 
 import java.util.Collections;
 import java.util.Comparator;

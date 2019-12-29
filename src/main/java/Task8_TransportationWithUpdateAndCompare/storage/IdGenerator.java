@@ -1,4 +1,4 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.storage;
+package  Task8_TransportationWithUpdateAndCompare.storage;
 
 public final class IdGenerator {
 

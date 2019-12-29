@@ -1,4 +1,4 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain;
+package Task8_TransportationWithUpdateAndCompare.cargo.domain;
 
 public enum CargoType {
     FOOD,

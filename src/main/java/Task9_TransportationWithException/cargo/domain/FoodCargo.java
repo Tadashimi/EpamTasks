@@ -1,4 +1,4 @@
-package main.java.Task9_TransportationWithException.cargo.domain;
+package  Task9_TransportationWithException.cargo.domain;
 
 import java.util.Date;
 

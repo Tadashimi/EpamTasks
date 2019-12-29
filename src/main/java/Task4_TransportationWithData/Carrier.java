@@ -1,4 +1,4 @@
-package main.java.Task4_TransportationWithData;
+package Task4_TransportationWithData;
 
 public class Carrier {
     private static Long carriersCount = 0L;

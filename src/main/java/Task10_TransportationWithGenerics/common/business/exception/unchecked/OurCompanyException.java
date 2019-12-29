@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.common.business.exception.unchecked;
+package  Task10_TransportationWithGenerics.common.business.exception.unchecked;
 
 public class OurCompanyException extends RuntimeException {
 

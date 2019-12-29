@@ -1,8 +1,8 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.transportation.domain;
+package  Task8_TransportationWithUpdateAndCompare.transportation.domain;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
-import main.java.Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
+import  Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
+import  Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
+import  Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
 
 import java.util.Date;
 

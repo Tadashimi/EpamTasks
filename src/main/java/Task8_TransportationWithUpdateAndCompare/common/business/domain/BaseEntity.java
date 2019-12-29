@@ -1,4 +1,4 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.common.business.domain;
+package Task8_TransportationWithUpdateAndCompare.common.business.domain;
 
 public abstract class BaseEntity {
 

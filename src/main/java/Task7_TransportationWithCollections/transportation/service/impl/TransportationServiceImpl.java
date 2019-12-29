@@ -1,8 +1,8 @@
-package main.java.Task7_TransportationWithCollections.transportation.service.impl;
+package Task7_TransportationWithCollections.transportation.service.impl;
 
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
-import main.java.Task7_TransportationWithCollections.transportation.repo.TransportationRepo;
-import main.java.Task7_TransportationWithCollections.transportation.service.TransportationService;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.transportation.repo.TransportationRepo;
+import Task7_TransportationWithCollections.transportation.service.TransportationService;
 
 public class TransportationServiceImpl implements TransportationService {
 

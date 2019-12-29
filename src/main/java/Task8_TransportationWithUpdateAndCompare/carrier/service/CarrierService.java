@@ -1,7 +1,7 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.carrier.service;
+package Task8_TransportationWithUpdateAndCompare.carrier.service;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
-import main.java.Task8_TransportationWithUpdateAndCompare.common.business.service.CommonService;
+import Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
+import Task8_TransportationWithUpdateAndCompare.common.business.service.CommonService;
 
 import java.util.List;
 

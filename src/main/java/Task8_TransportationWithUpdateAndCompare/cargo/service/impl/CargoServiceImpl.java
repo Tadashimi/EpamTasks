@@ -1,11 +1,11 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.impl;
+package Task8_TransportationWithUpdateAndCompare.cargo.service.impl;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.repo.CargoRepo;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.sortCargoList.CargoSort;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.sortCargoList.CompareField;
-import main.java.Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
+import Task8_TransportationWithUpdateAndCompare.cargo.domain.Cargo;
+import Task8_TransportationWithUpdateAndCompare.cargo.repo.CargoRepo;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.cargoListComparator.CargoSort;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.cargoListComparator.CompareField;
+import Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,21 +1,21 @@
-package main.java.Task10_TransportationWithGenerics.storage.initor;
+package  Task10_TransportationWithGenerics.storage.initor;
 
-import main.java.Task10_TransportationWithGenerics.application.serviceholder.ServiceHolder;
-import main.java.Task10_TransportationWithGenerics.cargo.domain.Cargo;
-import main.java.Task10_TransportationWithGenerics.cargo.domain.ClothersCargo;
-import main.java.Task10_TransportationWithGenerics.cargo.domain.FoodCargo;
-import main.java.Task10_TransportationWithGenerics.cargo.service.CargoService;
-import main.java.Task10_TransportationWithGenerics.carrier.domain.Carrier;
-import main.java.Task10_TransportationWithGenerics.carrier.service.CarrierService;
-import main.java.Task10_TransportationWithGenerics.transportation.domain.Transportation;
-import main.java.Task10_TransportationWithGenerics.transportation.service.TransportationService;
+import  Task10_TransportationWithGenerics.application.serviceholder.ServiceHolder;
+import  Task10_TransportationWithGenerics.cargo.domain.Cargo;
+import  Task10_TransportationWithGenerics.cargo.domain.ClothersCargo;
+import  Task10_TransportationWithGenerics.cargo.domain.FoodCargo;
+import  Task10_TransportationWithGenerics.cargo.service.CargoService;
+import  Task10_TransportationWithGenerics.carrier.domain.Carrier;
+import  Task10_TransportationWithGenerics.carrier.service.CarrierService;
+import  Task10_TransportationWithGenerics.transportation.domain.Transportation;
+import  Task10_TransportationWithGenerics.transportation.service.TransportationService;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static main.java.Task10_TransportationWithGenerics.common.solutions.utils.CollectionUtils.isNotEmpty;
+import static  Task10_TransportationWithGenerics.common.solutions.utils.CollectionUtils.isNotEmpty;
 
 public class InMemoryStorageInitor implements StorageInitor {
 

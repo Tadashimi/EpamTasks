@@ -1,14 +1,14 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.transportation.repo.impl;
+package  Task8_TransportationWithUpdateAndCompare.transportation.repo.impl;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
-import main.java.Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
-import main.java.Task8_TransportationWithUpdateAndCompare.storage.Storage;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.repo.TransportationRepo;
+import  Task8_TransportationWithUpdateAndCompare.common.solutions.utils.ArrayUtils;
+import  Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
+import  Task8_TransportationWithUpdateAndCompare.storage.Storage;
+import  Task8_TransportationWithUpdateAndCompare.transportation.domain.Transportation;
+import  Task8_TransportationWithUpdateAndCompare.transportation.repo.TransportationRepo;
 
-import static main.java.Task8_TransportationWithUpdateAndCompare.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
-import static main.java.Task8_TransportationWithUpdateAndCompare.storage.Storage.transportationIndex;
-import static main.java.Task8_TransportationWithUpdateAndCompare.storage.Storage.transportations;
+import static  Task8_TransportationWithUpdateAndCompare.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
+import static  Task8_TransportationWithUpdateAndCompare.storage.Storage.transportationIndex;
+import static  Task8_TransportationWithUpdateAndCompare.storage.Storage.transportations;
 
 public class TransportationArrayRepoImpl implements TransportationRepo {
 

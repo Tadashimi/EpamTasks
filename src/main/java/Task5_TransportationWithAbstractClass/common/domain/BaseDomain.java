@@ -1,4 +1,4 @@
-package main.java.Task5_TransportationWithAbstractClass.common.domain;
+package Task5_TransportationWithAbstractClass.common.domain;
 
 public abstract class BaseDomain {
     protected Long id;

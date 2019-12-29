@@ -1,9 +1,9 @@
-package main.java.Task5_TransportationWithAbstractClass.cargo.domain;
+package Task5_TransportationWithAbstractClass.cargo.domain;
 
-import main.java.Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
-import main.java.Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
+import Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
+import Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
 
-import static main.java.Task5_TransportationWithAbstractClass.Constants.INITIAL_ARRAY_CAPACITY;
+import static Task5_TransportationWithAbstractClass.Constants.INITIAL_ARRAY_CAPACITY;
 
 public class Cargo extends BaseDomain {
     private String name;

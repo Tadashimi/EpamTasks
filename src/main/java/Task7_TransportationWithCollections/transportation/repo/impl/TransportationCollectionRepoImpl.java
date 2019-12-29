@@ -1,12 +1,12 @@
-package main.java.Task7_TransportationWithCollections.transportation.repo.impl;
+package Task7_TransportationWithCollections.transportation.repo.impl;
 
-import main.java.Task7_TransportationWithCollections.storage.IdGenerator;
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
-import main.java.Task7_TransportationWithCollections.transportation.repo.TransportationRepo;
+import Task7_TransportationWithCollections.storage.IdGenerator;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.transportation.repo.TransportationRepo;
 
 import java.util.Objects;
 
-import static main.java.Task7_TransportationWithCollections.storage.Storage.transportationList;
+import static Task7_TransportationWithCollections.storage.Storage.transportationList;
 
 public class TransportationCollectionRepoImpl implements TransportationRepo {
 

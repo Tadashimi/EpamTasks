@@ -1,7 +1,7 @@
-package main.java.Task7_TransportationWithCollections.transportation.service;
+package Task7_TransportationWithCollections.transportation.service;
 
-import main.java.Task7_TransportationWithCollections.common.business.service.CommonService;
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.common.business.service.CommonService;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
 
 public interface TransportationService extends CommonService {
 

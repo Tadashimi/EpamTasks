@@ -1,14 +1,14 @@
-package main.java.Task9_TransportationWithException.transportation.repo.impl;
+package  Task9_TransportationWithException.transportation.repo.impl;
 
 
-import main.java.Task9_TransportationWithException.storage.IdGenerator;
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
-import main.java.Task9_TransportationWithException.transportation.repo.TransportationRepo;
+import  Task9_TransportationWithException.storage.IdGenerator;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.transportation.repo.TransportationRepo;
 
 import java.util.Iterator;
 import java.util.List;
 
-import static main.java.Task9_TransportationWithException.storage.Storage.transportationCollection;
+import static  Task9_TransportationWithException.storage.Storage.transportationCollection;
 
 public class TransportationCollectionRepoImpl implements TransportationRepo {
 

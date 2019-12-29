@@ -1,7 +1,7 @@
-package main.java.Task10_TransportationWithGenerics.carrier.service;
+package  Task10_TransportationWithGenerics.carrier.service;
 
-import main.java.Task10_TransportationWithGenerics.carrier.domain.Carrier;
-import main.java.Task10_TransportationWithGenerics.common.business.service.CommonService;
+import  Task10_TransportationWithGenerics.carrier.domain.Carrier;
+import  Task10_TransportationWithGenerics.common.business.service.CommonService;
 
 import java.util.List;
 

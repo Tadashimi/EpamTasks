@@ -1,7 +1,7 @@
-package main.java.Task6_TransportationWithRepoAndService.transportation.service.impl;
+package Task6_TransportationWithRepoAndService.transportation.service.impl;
 
-import main.java.Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
-import main.java.Task6_TransportationWithRepoAndService.transportation.service.TransportationService;
+import Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
+import Task6_TransportationWithRepoAndService.transportation.service.TransportationService;
 
 public class TransportationServiceImpl implements TransportationService {
 

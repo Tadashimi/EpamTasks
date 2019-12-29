@@ -1,4 +1,4 @@
-package main.java.Task6_TransportationWithRepoAndService.cargo.domain;
+package Task6_TransportationWithRepoAndService.cargo.domain;
 
 import java.util.Date;
 

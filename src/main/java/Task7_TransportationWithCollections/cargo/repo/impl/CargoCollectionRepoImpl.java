@@ -1,14 +1,14 @@
-package main.java.Task7_TransportationWithCollections.cargo.repo.impl;
+package Task7_TransportationWithCollections.cargo.repo.impl;
 
-import main.java.Task7_TransportationWithCollections.cargo.domain.Cargo;
-import main.java.Task7_TransportationWithCollections.cargo.repo.CargoRepo;
-import main.java.Task7_TransportationWithCollections.storage.IdGenerator;
+import Task7_TransportationWithCollections.cargo.domain.Cargo;
+import Task7_TransportationWithCollections.cargo.repo.CargoRepo;
+import Task7_TransportationWithCollections.storage.IdGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static main.java.Task7_TransportationWithCollections.storage.Storage.cargoList;
+import static Task7_TransportationWithCollections.storage.Storage.cargoList;
 
 public class CargoCollectionRepoImpl implements CargoRepo {
 

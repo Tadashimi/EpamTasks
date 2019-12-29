@@ -1,9 +1,9 @@
-package main.java.Task6_TransportationWithRepoAndService.storage;
+package Task6_TransportationWithRepoAndService.storage;
 
-import main.java.Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
-import main.java.Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
-import main.java.Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
-import main.java.Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
+import Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
+import Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
+import Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
+import Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
 
 public class Storage {
 

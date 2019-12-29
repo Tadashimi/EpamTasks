@@ -1,4 +1,4 @@
-package main.java.Task1_resolveEquation;
+package Task1_resolveEquation;
 
 public class Main {
 

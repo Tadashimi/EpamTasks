@@ -1,7 +1,7 @@
-package main.java.Task6_TransportationWithRepoAndService.cargo.repo;
+package Task6_TransportationWithRepoAndService.cargo.repo;
 
-import main.java.Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
-import main.java.Task6_TransportationWithRepoAndService.common.repo.BaseRepo;
+import Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
+import Task6_TransportationWithRepoAndService.common.repo.BaseRepo;
 
 public interface CargoRepo extends BaseRepo {
 

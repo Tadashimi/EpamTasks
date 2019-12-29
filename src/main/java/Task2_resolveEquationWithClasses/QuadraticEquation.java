@@ -1,6 +1,6 @@
-package main.java.Task2_resolveEquationWithClasses;
+package Task2_resolveEquationWithClasses;
 
-import static main.java.Task2_resolveEquationWithClasses.Discriminant.*;
+import static Task2_resolveEquationWithClasses.Discriminant.*;
 
 public class QuadraticEquation {
     private InputData inputData;

@@ -1,16 +1,16 @@
-package main.java.Task9_TransportationWithException.carrier.service.impl;
+package  Task9_TransportationWithException.carrier.service.impl;
 
-import main.java.Task9_TransportationWithException.carrier.domain.Carrier;
-import main.java.Task9_TransportationWithException.carrier.exception.CarrierDeleteException;
-import main.java.Task9_TransportationWithException.carrier.repo.CarrierRepo;
-import main.java.Task9_TransportationWithException.carrier.service.CarrierService;
-import main.java.Task9_TransportationWithException.common.solutions.exception.TransportationException;
+import  Task9_TransportationWithException.carrier.domain.Carrier;
+import  Task9_TransportationWithException.carrier.exception.CarrierDeleteException;
+import  Task9_TransportationWithException.carrier.repo.CarrierRepo;
+import  Task9_TransportationWithException.carrier.service.CarrierService;
+import  Task9_TransportationWithException.common.solutions.exception.TransportationException;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static main.java.Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARRIER_IS_USED_IN_TRANSPORTATION_ERROR;
+import static  Task9_TransportationWithException.common.solutions.exception.ExceptionMessage.CARRIER_IS_USED_IN_TRANSPORTATION_ERROR;
 
 public class CarrierServiceImpl implements CarrierService {
 

@@ -1,14 +1,14 @@
-package main.java.Task10_TransportationWithGenerics.transportation.repo.impl;
+package  Task10_TransportationWithGenerics.transportation.repo.impl;
 
 
-import main.java.Task10_TransportationWithGenerics.storage.IdGenerator;
-import main.java.Task10_TransportationWithGenerics.transportation.domain.Transportation;
-import main.java.Task10_TransportationWithGenerics.transportation.repo.TransportationRepo;
+import  Task10_TransportationWithGenerics.storage.IdGenerator;
+import  Task10_TransportationWithGenerics.transportation.domain.Transportation;
+import  Task10_TransportationWithGenerics.transportation.repo.TransportationRepo;
 
 import java.util.Iterator;
 import java.util.List;
 
-import static main.java.Task10_TransportationWithGenerics.storage.Storage.transportationCollection;
+import static  Task10_TransportationWithGenerics.storage.Storage.transportationCollection;
 
 public class TransportationCollectionRepoImpl implements TransportationRepo {
 

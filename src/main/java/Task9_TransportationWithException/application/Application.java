@@ -1,29 +1,29 @@
-package main.java.Task9_TransportationWithException.application;
+package  Task9_TransportationWithException.application;
 
-import main.java.Task9_TransportationWithException.application.serviceholder.ServiceHolder;
-import main.java.Task9_TransportationWithException.application.serviceholder.StorageType;
-import main.java.Task9_TransportationWithException.cargo.domain.Cargo;
-import main.java.Task9_TransportationWithException.cargo.domain.CargoField;
-import main.java.Task9_TransportationWithException.cargo.search.CargoSearchCondition;
-import main.java.Task9_TransportationWithException.cargo.service.CargoService;
-import main.java.Task9_TransportationWithException.carrier.service.CarrierService;
-import main.java.Task9_TransportationWithException.common.solutions.exception.TransportationException;
-import main.java.Task9_TransportationWithException.common.solutions.search.OrderType;
-import main.java.Task9_TransportationWithException.common.solutions.utils.CollectionUtils;
-import main.java.Task9_TransportationWithException.storage.initor.StorageInitor;
-import main.java.Task9_TransportationWithException.storage.initor.impl.InMemoryStorageInitor;
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
-import main.java.Task9_TransportationWithException.transportation.service.TransportationService;
+import  Task9_TransportationWithException.application.serviceholder.ServiceHolder;
+import  Task9_TransportationWithException.application.serviceholder.StorageType;
+import  Task9_TransportationWithException.cargo.domain.Cargo;
+import  Task9_TransportationWithException.cargo.domain.CargoField;
+import  Task9_TransportationWithException.cargo.search.CargoSearchCondition;
+import  Task9_TransportationWithException.cargo.service.CargoService;
+import  Task9_TransportationWithException.carrier.service.CarrierService;
+import  Task9_TransportationWithException.common.solutions.exception.TransportationException;
+import  Task9_TransportationWithException.common.solutions.search.OrderType;
+import  Task9_TransportationWithException.common.solutions.utils.CollectionUtils;
+import  Task9_TransportationWithException.storage.initor.StorageInitor;
+import  Task9_TransportationWithException.storage.initor.impl.InMemoryStorageInitor;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.transportation.service.TransportationService;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 
-import static main.java.Task9_TransportationWithException.cargo.domain.CargoField.NAME;
-import static main.java.Task9_TransportationWithException.cargo.domain.CargoField.WEIGHT;
-import static main.java.Task9_TransportationWithException.common.solutions.search.OrderType.ASC;
-import static main.java.Task9_TransportationWithException.common.solutions.search.OrderType.DESC;
+import static  Task9_TransportationWithException.cargo.domain.CargoField.NAME;
+import static  Task9_TransportationWithException.cargo.domain.CargoField.WEIGHT;
+import static  Task9_TransportationWithException.common.solutions.search.OrderType.ASC;
+import static  Task9_TransportationWithException.common.solutions.search.OrderType.DESC;
 import static java.util.Collections.singletonList;
 
 public class Application {

@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.common.solutions.utils;
+package  Task10_TransportationWithGenerics.common.solutions.utils;
 
 public final class ArrayUtils {
 

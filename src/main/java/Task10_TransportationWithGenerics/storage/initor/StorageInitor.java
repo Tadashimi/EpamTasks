@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.storage.initor;
+package  Task10_TransportationWithGenerics.storage.initor;
 
 public interface StorageInitor {
 

@@ -1,7 +1,7 @@
-package main.java.Task6_TransportationWithRepoAndService.carrier.domain;
+package Task6_TransportationWithRepoAndService.carrier.domain;
 
-import main.java.Task6_TransportationWithRepoAndService.common.domain.BaseEntity;
-import main.java.Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
+import Task6_TransportationWithRepoAndService.common.domain.BaseEntity;
+import Task6_TransportationWithRepoAndService.transportation.domain.Transportation;
 
 public class Carrier extends BaseEntity {
 

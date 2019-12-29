@@ -1,8 +1,8 @@
-package main.java.Task10_TransportationWithGenerics.storage;
+package  Task10_TransportationWithGenerics.storage;
 
-import main.java.Task10_TransportationWithGenerics.cargo.domain.Cargo;
-import main.java.Task10_TransportationWithGenerics.carrier.domain.Carrier;
-import main.java.Task10_TransportationWithGenerics.transportation.domain.Transportation;
+import  Task10_TransportationWithGenerics.cargo.domain.Cargo;
+import  Task10_TransportationWithGenerics.carrier.domain.Carrier;
+import  Task10_TransportationWithGenerics.transportation.domain.Transportation;
 
 import java.util.ArrayList;
 import java.util.List;

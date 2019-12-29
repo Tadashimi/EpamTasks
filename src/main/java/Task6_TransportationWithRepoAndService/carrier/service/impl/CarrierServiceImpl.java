@@ -1,7 +1,7 @@
-package main.java.Task6_TransportationWithRepoAndService.carrier.service.impl;
+package Task6_TransportationWithRepoAndService.carrier.service.impl;
 
-import main.java.Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
-import main.java.Task6_TransportationWithRepoAndService.carrier.service.CarrierService;
+import Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
+import Task6_TransportationWithRepoAndService.carrier.service.CarrierService;
 
 public class CarrierServiceImpl implements CarrierService {
 

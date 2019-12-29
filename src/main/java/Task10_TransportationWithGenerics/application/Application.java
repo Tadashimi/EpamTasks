@@ -1,27 +1,27 @@
-package main.java.Task10_TransportationWithGenerics.application;
+package  Task10_TransportationWithGenerics.application;
 
-import main.java.Task10_TransportationWithGenerics.application.serviceholder.ServiceHolder;
-import main.java.Task10_TransportationWithGenerics.application.serviceholder.StorageType;
-import main.java.Task10_TransportationWithGenerics.cargo.domain.Cargo;
-import main.java.Task10_TransportationWithGenerics.cargo.domain.CargoField;
-import main.java.Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
-import main.java.Task10_TransportationWithGenerics.cargo.service.CargoService;
-import main.java.Task10_TransportationWithGenerics.carrier.service.CarrierService;
-import main.java.Task10_TransportationWithGenerics.common.solutions.search.OrderType;
-import main.java.Task10_TransportationWithGenerics.common.solutions.utils.CollectionUtils;
-import main.java.Task10_TransportationWithGenerics.storage.initor.InMemoryStorageInitor;
-import main.java.Task10_TransportationWithGenerics.storage.initor.StorageInitor;
-import main.java.Task10_TransportationWithGenerics.transportation.service.TransportationService;
+import  Task10_TransportationWithGenerics.application.serviceholder.ServiceHolder;
+import  Task10_TransportationWithGenerics.application.serviceholder.StorageType;
+import  Task10_TransportationWithGenerics.cargo.domain.Cargo;
+import  Task10_TransportationWithGenerics.cargo.domain.CargoField;
+import  Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
+import  Task10_TransportationWithGenerics.cargo.service.CargoService;
+import  Task10_TransportationWithGenerics.carrier.service.CarrierService;
+import  Task10_TransportationWithGenerics.common.solutions.search.OrderType;
+import  Task10_TransportationWithGenerics.common.solutions.utils.CollectionUtils;
+import  Task10_TransportationWithGenerics.storage.initor.InMemoryStorageInitor;
+import  Task10_TransportationWithGenerics.storage.initor.StorageInitor;
+import  Task10_TransportationWithGenerics.transportation.service.TransportationService;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 
-import static main.java.Task10_TransportationWithGenerics.cargo.domain.CargoField.NAME;
-import static main.java.Task10_TransportationWithGenerics.cargo.domain.CargoField.WEIGHT;
-import static main.java.Task10_TransportationWithGenerics.common.solutions.search.OrderType.ASC;
-import static main.java.Task10_TransportationWithGenerics.common.solutions.search.OrderType.DESC;
+import static  Task10_TransportationWithGenerics.cargo.domain.CargoField.NAME;
+import static  Task10_TransportationWithGenerics.cargo.domain.CargoField.WEIGHT;
+import static  Task10_TransportationWithGenerics.common.solutions.search.OrderType.ASC;
+import static  Task10_TransportationWithGenerics.common.solutions.search.OrderType.DESC;
 import static java.util.Collections.singletonList;
 
 public class Application {

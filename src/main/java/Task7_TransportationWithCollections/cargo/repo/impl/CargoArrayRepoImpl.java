@@ -1,14 +1,14 @@
-package main.java.Task7_TransportationWithCollections.cargo.repo.impl;
+package Task7_TransportationWithCollections.cargo.repo.impl;
 
-import main.java.Task7_TransportationWithCollections.cargo.domain.Cargo;
-import main.java.Task7_TransportationWithCollections.cargo.repo.CargoRepo;
-import main.java.Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
-import main.java.Task7_TransportationWithCollections.storage.IdGenerator;
+import Task7_TransportationWithCollections.cargo.domain.Cargo;
+import Task7_TransportationWithCollections.cargo.repo.CargoRepo;
+import Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
+import Task7_TransportationWithCollections.storage.IdGenerator;
 
 import java.util.Objects;
 
-import static main.java.Task7_TransportationWithCollections.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
-import static main.java.Task7_TransportationWithCollections.storage.Storage.*;
+import static Task7_TransportationWithCollections.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
+import static Task7_TransportationWithCollections.storage.Storage.*;
 
 public class CargoArrayRepoImpl implements CargoRepo {
 

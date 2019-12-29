@@ -1,14 +1,14 @@
-package main.java.Task6_TransportationWithRepoAndService.cargo.repo.impl;
+package Task6_TransportationWithRepoAndService.cargo.repo.impl;
 
-import main.java.Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
-import main.java.Task6_TransportationWithRepoAndService.cargo.repo.CargoRepo;
-import main.java.Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
-import main.java.Task6_TransportationWithRepoAndService.storage.IdGenerator;
+import Task6_TransportationWithRepoAndService.cargo.domain.Cargo;
+import Task6_TransportationWithRepoAndService.cargo.repo.CargoRepo;
+import Task6_TransportationWithRepoAndService.common.utils.ArrayUtils;
+import Task6_TransportationWithRepoAndService.storage.IdGenerator;
 
 import java.util.Objects;
 
-import static main.java.Task6_TransportationWithRepoAndService.storage.Storage.cargoIndex;
-import static main.java.Task6_TransportationWithRepoAndService.storage.Storage.cargos;
+import static Task6_TransportationWithRepoAndService.storage.Storage.cargoIndex;
+import static Task6_TransportationWithRepoAndService.storage.Storage.cargos;
 
 public class CargoRepoImpl implements CargoRepo {
 

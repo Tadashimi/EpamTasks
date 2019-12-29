@@ -1,14 +1,14 @@
-package main.java.Task9_TransportationWithException.cargo.repo.impl;
+package  Task9_TransportationWithException.cargo.repo.impl;
 
 
-import main.java.Task9_TransportationWithException.cargo.domain.Cargo;
-import main.java.Task9_TransportationWithException.cargo.search.CargoSearchCondition;
-import main.java.Task9_TransportationWithException.common.solutions.utils.CollectionUtils;
-import main.java.Task9_TransportationWithException.storage.IdGenerator;
+import  Task9_TransportationWithException.cargo.domain.Cargo;
+import  Task9_TransportationWithException.cargo.search.CargoSearchCondition;
+import  Task9_TransportationWithException.common.solutions.utils.CollectionUtils;
+import  Task9_TransportationWithException.storage.IdGenerator;
 
 import java.util.*;
 
-import static main.java.Task9_TransportationWithException.storage.Storage.cargoCollection;
+import static  Task9_TransportationWithException.storage.Storage.cargoCollection;
 
 public class CargoCollectionRepoImpl extends CommonCargoRepo {
 

@@ -1,20 +1,20 @@
-package main.java.Task7_TransportationWithCollections;
+package Task7_TransportationWithCollections;
 
-import main.java.Task7_TransportationWithCollections.cargo.domain.Cargo;
-import main.java.Task7_TransportationWithCollections.cargo.domain.ClothersCargo;
-import main.java.Task7_TransportationWithCollections.cargo.domain.FoodCargo;
-import main.java.Task7_TransportationWithCollections.cargo.repo.CargoRepo;
-import main.java.Task7_TransportationWithCollections.cargo.repo.impl.CargoCollectionRepoImpl;
-import main.java.Task7_TransportationWithCollections.cargo.service.impl.CargoServiceImpl;
-import main.java.Task7_TransportationWithCollections.carrier.domain.Carrier;
-import main.java.Task7_TransportationWithCollections.carrier.domain.CarrierType;
-import main.java.Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
-import main.java.Task7_TransportationWithCollections.carrier.repo.impl.CarrierCollectionRepoImpl;
-import main.java.Task7_TransportationWithCollections.carrier.service.impl.CarrierServiceImpl;
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
-import main.java.Task7_TransportationWithCollections.transportation.repo.TransportationRepo;
-import main.java.Task7_TransportationWithCollections.transportation.repo.impl.TransportationCollectionRepoImpl;
-import main.java.Task7_TransportationWithCollections.transportation.service.impl.TransportationServiceImpl;
+import Task7_TransportationWithCollections.cargo.domain.Cargo;
+import Task7_TransportationWithCollections.cargo.domain.ClothersCargo;
+import Task7_TransportationWithCollections.cargo.domain.FoodCargo;
+import Task7_TransportationWithCollections.cargo.repo.CargoRepo;
+import Task7_TransportationWithCollections.cargo.repo.impl.CargoCollectionRepoImpl;
+import Task7_TransportationWithCollections.cargo.service.impl.CargoServiceImpl;
+import Task7_TransportationWithCollections.carrier.domain.Carrier;
+import Task7_TransportationWithCollections.carrier.domain.CarrierType;
+import Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
+import Task7_TransportationWithCollections.carrier.repo.impl.CarrierCollectionRepoImpl;
+import Task7_TransportationWithCollections.carrier.service.impl.CarrierServiceImpl;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.transportation.repo.TransportationRepo;
+import Task7_TransportationWithCollections.transportation.repo.impl.TransportationCollectionRepoImpl;
+import Task7_TransportationWithCollections.transportation.service.impl.TransportationServiceImpl;
 
 import java.util.Date;
 

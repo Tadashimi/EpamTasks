@@ -1,14 +1,14 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.carrier.repo.impl;
+package Task8_TransportationWithUpdateAndCompare.carrier.repo.impl;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.repo.CarrierRepo;
-import main.java.Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
+import Task8_TransportationWithUpdateAndCompare.carrier.domain.Carrier;
+import Task8_TransportationWithUpdateAndCompare.carrier.repo.CarrierRepo;
+import Task8_TransportationWithUpdateAndCompare.storage.IdGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static main.java.Task8_TransportationWithUpdateAndCompare.storage.Storage.carrierList;
+import static Task8_TransportationWithUpdateAndCompare.storage.Storage.carrierList;
 
 public class CarrierCollectionRepoImpl implements CarrierRepo {
 

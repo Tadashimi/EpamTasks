@@ -1,9 +1,9 @@
-package main.java.Task5_TransportationWithAbstractClass.carrier.domain;
+package Task5_TransportationWithAbstractClass.carrier.domain;
 
-import main.java.Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
-import main.java.Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
+import Task5_TransportationWithAbstractClass.common.domain.BaseDomain;
+import Task5_TransportationWithAbstractClass.transportation.domain.Transportation;
 
-import static main.java.Task5_TransportationWithAbstractClass.Constants.INITIAL_ARRAY_CAPACITY;
+import static Task5_TransportationWithAbstractClass.Constants.INITIAL_ARRAY_CAPACITY;
 
 public class Carrier extends BaseDomain {
     private String name;

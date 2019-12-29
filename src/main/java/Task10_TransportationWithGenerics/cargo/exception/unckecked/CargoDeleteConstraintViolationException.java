@@ -1,6 +1,6 @@
-package main.java.Task10_TransportationWithGenerics.cargo.exception.unckecked;
+package  Task10_TransportationWithGenerics.cargo.exception.unckecked;
 
-import main.java.Task10_TransportationWithGenerics.common.business.exception.unchecked.OurCompanyException;
+import  Task10_TransportationWithGenerics.common.business.exception.unchecked.OurCompanyException;
 
 public class CargoDeleteConstraintViolationException extends OurCompanyException {
 

@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.common.business.domain;
+package  Task10_TransportationWithGenerics.common.business.domain;
 
 public abstract class BaseEntity {
 

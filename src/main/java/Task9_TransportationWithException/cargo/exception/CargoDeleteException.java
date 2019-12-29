@@ -1,6 +1,6 @@
-package main.java.Task9_TransportationWithException.cargo.exception;
+package  Task9_TransportationWithException.cargo.exception;
 
-import main.java.Task9_TransportationWithException.common.solutions.exception.TransportationException;
+import  Task9_TransportationWithException.common.solutions.exception.TransportationException;
 
 public class CargoDeleteException extends TransportationException {
 

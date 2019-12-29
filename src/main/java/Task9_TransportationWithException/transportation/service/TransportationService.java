@@ -1,7 +1,7 @@
-package main.java.Task9_TransportationWithException.transportation.service;
+package  Task9_TransportationWithException.transportation.service;
 
-import main.java.Task9_TransportationWithException.common.business.service.CommonService;
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.common.business.service.CommonService;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
 
 import java.util.List;
 

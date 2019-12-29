@@ -1,4 +1,4 @@
-package main.java.Task7_TransportationWithCollections.cargo.domain;
+package Task7_TransportationWithCollections.cargo.domain;
 
 import java.util.Date;
 

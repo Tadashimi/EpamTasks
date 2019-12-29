@@ -1,10 +1,10 @@
-package main.java.Task7_TransportationWithCollections.storage;
+package Task7_TransportationWithCollections.storage;
 
 
-import main.java.Task7_TransportationWithCollections.cargo.domain.Cargo;
-import main.java.Task7_TransportationWithCollections.carrier.domain.Carrier;
-import main.java.Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.cargo.domain.Cargo;
+import Task7_TransportationWithCollections.carrier.domain.Carrier;
+import Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
 
 import java.util.ArrayList;
 import java.util.List;

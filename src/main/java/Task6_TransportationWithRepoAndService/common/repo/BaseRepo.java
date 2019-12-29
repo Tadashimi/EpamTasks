@@ -1,4 +1,4 @@
-package main.java.Task6_TransportationWithRepoAndService.common.repo;
+package Task6_TransportationWithRepoAndService.common.repo;
 
 public interface BaseRepo {
 

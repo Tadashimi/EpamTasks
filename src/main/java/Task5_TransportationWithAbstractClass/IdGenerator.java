@@ -1,4 +1,4 @@
-package main.java.Task5_TransportationWithAbstractClass;
+package Task5_TransportationWithAbstractClass;
 
 public final class IdGenerator {
     private IdGenerator() {

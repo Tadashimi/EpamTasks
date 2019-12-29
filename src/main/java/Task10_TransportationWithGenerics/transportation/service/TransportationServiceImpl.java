@@ -1,7 +1,7 @@
-package main.java.Task10_TransportationWithGenerics.transportation.service;
+package  Task10_TransportationWithGenerics.transportation.service;
 
-import main.java.Task10_TransportationWithGenerics.transportation.domain.Transportation;
-import main.java.Task10_TransportationWithGenerics.transportation.repo.TransportationRepo;
+import  Task10_TransportationWithGenerics.transportation.domain.Transportation;
+import  Task10_TransportationWithGenerics.transportation.repo.TransportationRepo;
 
 import java.util.List;
 

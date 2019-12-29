@@ -1,6 +1,6 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.common.business.repo;
+package Task8_TransportationWithUpdateAndCompare.common.business.repo;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
+import Task8_TransportationWithUpdateAndCompare.common.business.domain.BaseEntity;
 
 public final class CommonRepoHelper {
 

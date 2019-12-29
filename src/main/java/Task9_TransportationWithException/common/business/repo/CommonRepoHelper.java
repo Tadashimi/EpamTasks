@@ -1,6 +1,6 @@
-package main.java.Task9_TransportationWithException.common.business.repo;
+package  Task9_TransportationWithException.common.business.repo;
 
-import main.java.Task9_TransportationWithException.common.business.domain.BaseEntity;
+import  Task9_TransportationWithException.common.business.domain.BaseEntity;
 
 public final class CommonRepoHelper {
 

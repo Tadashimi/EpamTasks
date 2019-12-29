@@ -1,7 +1,7 @@
-package main.java.Task9_TransportationWithException.cargo.search;
+package  Task9_TransportationWithException.cargo.search;
 
-import main.java.Task9_TransportationWithException.cargo.domain.CargoField;
-import main.java.Task9_TransportationWithException.common.solutions.search.OrderType;
+import  Task9_TransportationWithException.cargo.domain.CargoField;
+import  Task9_TransportationWithException.common.solutions.search.OrderType;
 
 import java.util.Set;
 

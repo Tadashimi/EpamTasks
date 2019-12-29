@@ -1,6 +1,6 @@
-package main.java.Task10_TransportationWithGenerics.common.business.repo;
+package  Task10_TransportationWithGenerics.common.business.repo;
 
-import main.java.Task10_TransportationWithGenerics.common.business.domain.BaseEntity;
+import  Task10_TransportationWithGenerics.common.business.domain.BaseEntity;
 
 import java.util.List;
 

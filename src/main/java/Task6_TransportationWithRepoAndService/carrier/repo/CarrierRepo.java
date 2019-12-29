@@ -1,7 +1,7 @@
-package main.java.Task6_TransportationWithRepoAndService.carrier.repo;
+package Task6_TransportationWithRepoAndService.carrier.repo;
 
-import main.java.Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
-import main.java.Task6_TransportationWithRepoAndService.common.repo.BaseRepo;
+import Task6_TransportationWithRepoAndService.carrier.domain.Carrier;
+import Task6_TransportationWithRepoAndService.common.repo.BaseRepo;
 
 public interface CarrierRepo extends BaseRepo {
 

@@ -1,4 +1,4 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.common.business.repo;
+package Task8_TransportationWithUpdateAndCompare.common.business.repo;
 
 public interface CommonRepo {
 

@@ -1,4 +1,4 @@
-package main.java.Task5_TransportationWithAbstractClass.cargo.domain;
+package Task5_TransportationWithAbstractClass.cargo.domain;
 
 public class OversizedCargo extends Cargo {
     private Float length;

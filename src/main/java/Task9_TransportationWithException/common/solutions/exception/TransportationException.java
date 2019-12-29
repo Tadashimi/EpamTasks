@@ -1,4 +1,4 @@
-package main.java.Task9_TransportationWithException.common.solutions.exception;
+package  Task9_TransportationWithException.common.solutions.exception;
 
 public abstract class TransportationException extends RuntimeException {
     protected final int errorCode;

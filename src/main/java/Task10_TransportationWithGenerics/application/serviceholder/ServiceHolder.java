@@ -1,17 +1,17 @@
-package main.java.Task10_TransportationWithGenerics.application.serviceholder;
+package  Task10_TransportationWithGenerics.application.serviceholder;
 
-import main.java.Task10_TransportationWithGenerics.cargo.repo.impl.CargoArrayRepoImpl;
-import main.java.Task10_TransportationWithGenerics.cargo.repo.impl.CargoCollectionRepoImpl;
-import main.java.Task10_TransportationWithGenerics.cargo.service.CargoService;
-import main.java.Task10_TransportationWithGenerics.cargo.service.CargoServiceImpl;
-import main.java.Task10_TransportationWithGenerics.carrier.repo.impl.CarrierArrayRepoImpl;
-import main.java.Task10_TransportationWithGenerics.carrier.repo.impl.CarrierCollectionRepoImpl;
-import main.java.Task10_TransportationWithGenerics.carrier.service.CarrierService;
-import main.java.Task10_TransportationWithGenerics.carrier.service.CarrierServiceImpl;
-import main.java.Task10_TransportationWithGenerics.transportation.repo.impl.TransportationArrayRepoImpl;
-import main.java.Task10_TransportationWithGenerics.transportation.repo.impl.TransportationCollectionRepoImpl;
-import main.java.Task10_TransportationWithGenerics.transportation.service.TransportationService;
-import main.java.Task10_TransportationWithGenerics.transportation.service.TransportationServiceImpl;
+import  Task10_TransportationWithGenerics.cargo.repo.impl.CargoArrayRepoImpl;
+import  Task10_TransportationWithGenerics.cargo.repo.impl.CargoCollectionRepoImpl;
+import  Task10_TransportationWithGenerics.cargo.service.CargoService;
+import  Task10_TransportationWithGenerics.cargo.service.CargoServiceImpl;
+import  Task10_TransportationWithGenerics.carrier.repo.impl.CarrierArrayRepoImpl;
+import  Task10_TransportationWithGenerics.carrier.repo.impl.CarrierCollectionRepoImpl;
+import  Task10_TransportationWithGenerics.carrier.service.CarrierService;
+import  Task10_TransportationWithGenerics.carrier.service.CarrierServiceImpl;
+import  Task10_TransportationWithGenerics.transportation.repo.impl.TransportationArrayRepoImpl;
+import  Task10_TransportationWithGenerics.transportation.repo.impl.TransportationCollectionRepoImpl;
+import  Task10_TransportationWithGenerics.transportation.service.TransportationService;
+import  Task10_TransportationWithGenerics.transportation.service.TransportationServiceImpl;
 
 public final class ServiceHolder {
 

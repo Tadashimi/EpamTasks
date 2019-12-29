@@ -1,7 +1,7 @@
-package main.java.Task7_TransportationWithCollections.transportation.repo;
+package Task7_TransportationWithCollections.transportation.repo;
 
-import main.java.Task7_TransportationWithCollections.common.business.repo.CommonRepo;
-import main.java.Task7_TransportationWithCollections.transportation.domain.Transportation;
+import Task7_TransportationWithCollections.common.business.repo.CommonRepo;
+import Task7_TransportationWithCollections.transportation.domain.Transportation;
 
 public interface TransportationRepo extends CommonRepo {
 

@@ -1,8 +1,8 @@
-package main.java.Task10_TransportationWithGenerics.cargo.repo;
+package  Task10_TransportationWithGenerics.cargo.repo;
 
-import main.java.Task10_TransportationWithGenerics.cargo.domain.Cargo;
-import main.java.Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
-import main.java.Task10_TransportationWithGenerics.common.business.repo.CommonRepo;
+import  Task10_TransportationWithGenerics.cargo.domain.Cargo;
+import  Task10_TransportationWithGenerics.cargo.search.CargoSearchCondition;
+import  Task10_TransportationWithGenerics.common.business.repo.CommonRepo;
 
 import java.util.List;
 

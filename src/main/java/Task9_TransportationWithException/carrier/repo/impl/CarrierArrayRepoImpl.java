@@ -1,20 +1,20 @@
-package main.java.Task9_TransportationWithException.carrier.repo.impl;
+package  Task9_TransportationWithException.carrier.repo.impl;
 
 
-import main.java.Task9_TransportationWithException.transportation.domain.Transportation;
-import main.java.Task9_TransportationWithException.carrier.domain.Carrier;
-import main.java.Task9_TransportationWithException.carrier.repo.CarrierRepo;
-import main.java.Task9_TransportationWithException.common.solutions.utils.ArrayUtils;
-import main.java.Task9_TransportationWithException.storage.IdGenerator;
+import  Task9_TransportationWithException.transportation.domain.Transportation;
+import  Task9_TransportationWithException.carrier.domain.Carrier;
+import  Task9_TransportationWithException.carrier.repo.CarrierRepo;
+import  Task9_TransportationWithException.common.solutions.utils.ArrayUtils;
+import  Task9_TransportationWithException.storage.IdGenerator;
 
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-import static main.java.Task9_TransportationWithException.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
-import static main.java.Task9_TransportationWithException.storage.Storage.carrierArray;
-import static main.java.Task9_TransportationWithException.storage.Storage.carrierIndex;
+import static  Task9_TransportationWithException.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
+import static  Task9_TransportationWithException.storage.Storage.carrierArray;
+import static  Task9_TransportationWithException.storage.Storage.carrierIndex;
 
 public class CarrierArrayRepoImpl implements CarrierRepo {
 

@@ -1,4 +1,4 @@
-package main.java.Task3_СargoTransportation;
+package Task3_СargoTransportation;
 
 public class Cargo {
     private String name;

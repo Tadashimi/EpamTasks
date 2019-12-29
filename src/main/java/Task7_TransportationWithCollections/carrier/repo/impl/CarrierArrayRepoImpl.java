@@ -1,15 +1,15 @@
-package main.java.Task7_TransportationWithCollections.carrier.repo.impl;
+package Task7_TransportationWithCollections.carrier.repo.impl;
 
-import main.java.Task7_TransportationWithCollections.carrier.domain.Carrier;
-import main.java.Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
-import main.java.Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
-import main.java.Task7_TransportationWithCollections.storage.IdGenerator;
+import Task7_TransportationWithCollections.carrier.domain.Carrier;
+import Task7_TransportationWithCollections.carrier.repo.CarrierRepo;
+import Task7_TransportationWithCollections.common.solutions.utils.ArrayUtils;
+import Task7_TransportationWithCollections.storage.IdGenerator;
 
 import java.util.Objects;
 
-import static main.java.Task7_TransportationWithCollections.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
-import static main.java.Task7_TransportationWithCollections.storage.Storage.carrierIndex;
-import static main.java.Task7_TransportationWithCollections.storage.Storage.carriers;
+import static Task7_TransportationWithCollections.common.business.repo.CommonRepoHelper.findEntityIndexInArrayStorageById;
+import static Task7_TransportationWithCollections.storage.Storage.carrierIndex;
+import static Task7_TransportationWithCollections.storage.Storage.carriers;
 
 public class CarrierArrayRepoImpl implements CarrierRepo {
 

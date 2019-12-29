@@ -1,4 +1,4 @@
-package main.java.Task7_TransportationWithCollections.common.solutions.utils;
+package Task7_TransportationWithCollections.common.solutions.utils;
 
 public final class ArrayUtils {
 

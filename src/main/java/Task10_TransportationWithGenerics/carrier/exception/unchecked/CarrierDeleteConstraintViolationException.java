@@ -1,6 +1,6 @@
-package main.java.Task10_TransportationWithGenerics.carrier.exception.unchecked;
+package  Task10_TransportationWithGenerics.carrier.exception.unchecked;
 
-import main.java.Task10_TransportationWithGenerics.common.business.exception.unchecked.OurCompanyException;
+import  Task10_TransportationWithGenerics.common.business.exception.unchecked.OurCompanyException;
 
 public class CarrierDeleteConstraintViolationException extends OurCompanyException {
 

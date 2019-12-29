@@ -1,4 +1,4 @@
-package main.java.Task10_TransportationWithGenerics.storage;
+package  Task10_TransportationWithGenerics.storage;
 
 public final class IdGenerator {
 

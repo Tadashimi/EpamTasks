@@ -1,17 +1,17 @@
-package main.java.Task8_TransportationWithUpdateAndCompare.application.serviceholder;
+package Task8_TransportationWithUpdateAndCompare.application.serviceholder;
 
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.repo.impl.CargoArrayRepoImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.repo.impl.CargoCollectionRepoImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
-import main.java.Task8_TransportationWithUpdateAndCompare.cargo.service.impl.CargoServiceImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.repo.impl.CarrierArrayRepoImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.repo.impl.CarrierCollectionRepoImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
-import main.java.Task8_TransportationWithUpdateAndCompare.carrier.service.impl.CarrierServiceImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.repo.impl.TransportationArrayRepoImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.repo.impl.TransportationCollectionRepoImpl;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.service.TransportationService;
-import main.java.Task8_TransportationWithUpdateAndCompare.transportation.service.impl.TransportationServiceImpl;
+import Task8_TransportationWithUpdateAndCompare.cargo.repo.impl.CargoArrayRepoImpl;
+import Task8_TransportationWithUpdateAndCompare.cargo.repo.impl.CargoCollectionRepoImpl;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.CargoService;
+import Task8_TransportationWithUpdateAndCompare.cargo.service.impl.CargoServiceImpl;
+import Task8_TransportationWithUpdateAndCompare.carrier.repo.impl.CarrierArrayRepoImpl;
+import Task8_TransportationWithUpdateAndCompare.carrier.repo.impl.CarrierCollectionRepoImpl;
+import Task8_TransportationWithUpdateAndCompare.carrier.service.CarrierService;
+import Task8_TransportationWithUpdateAndCompare.carrier.service.impl.CarrierServiceImpl;
+import Task8_TransportationWithUpdateAndCompare.transportation.repo.impl.TransportationArrayRepoImpl;
+import Task8_TransportationWithUpdateAndCompare.transportation.repo.impl.TransportationCollectionRepoImpl;
+import Task8_TransportationWithUpdateAndCompare.transportation.service.TransportationService;
+import Task8_TransportationWithUpdateAndCompare.transportation.service.impl.TransportationServiceImpl;
 
 public final class ServiceHolder {
     private static ServiceHolder instance = null;

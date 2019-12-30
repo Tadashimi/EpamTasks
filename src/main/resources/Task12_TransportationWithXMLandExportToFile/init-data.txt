@@ -1,0 +1,13 @@
+--Cargo section--
+1_a |FOOD    | APPLE  | 100 | 11.11.2020 | -50
+2_a |CLOTHERS| JEANS  | 200 | XXL        | COTTON
+3_a |FOOD    | ORANGE | 300 | 20.12.2025 | -20
+
+--Carrier section--
+1_b | YOUR_DELIVERY | Spb, Nevskiy 800     | SHIP
+2_b | FASTEST EVER  | Sp, Prosveheniya 900 | PLANE
+
+--Transportation section--
+1_a | 1_b | Vip order | Ivanov  | 11.11.2010
+2_a | 1_b | Fragile   | Petrov  | 11.11.2011
+3_a | 2_b | Fragile   | Sidorov | 01.01.2017

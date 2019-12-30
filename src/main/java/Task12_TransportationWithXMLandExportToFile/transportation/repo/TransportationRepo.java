@@ -1,0 +1,7 @@
+package Task12_TransportationWithXMLandExportToFile.transportation.repo;
+
+import Task12_TransportationWithXMLandExportToFile.common.business.repo.CommonRepo;
+import Task12_TransportationWithXMLandExportToFile.transportation.domain.Transportation;
+
+public interface TransportationRepo extends CommonRepo<Transportation, Long> {
+}

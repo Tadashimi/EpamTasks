@@ -41,7 +41,7 @@ public class TransportationSystemDataExport implements DataExport {
     }
 
     @Override
-    public void exportDataToFile() throws IOException {
+    public void exportData() throws IOException {
         outputFile = File.createTempFile("output-data", ".txt");
 
         List<String> dataList = createDataList();

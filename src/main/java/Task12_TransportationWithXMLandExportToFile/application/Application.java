@@ -154,7 +154,7 @@ public class Application {
     private static void demoExportData() {
         TransportationSystemDataExport transportationSystemDataExport = new TransportationSystemDataExport(cargoService, carrierService, transportationService);
         try {
-            transportationSystemDataExport.exportDataToFile();
+            transportationSystemDataExport.exportData();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

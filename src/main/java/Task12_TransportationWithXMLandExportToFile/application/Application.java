@@ -153,13 +153,12 @@ public class Application {
 
     private static void demoExportData() {
         TransportationSystemDataExport transportationSystemDataExport = new TransportationSystemDataExport(cargoService, carrierService, transportationService);
-        File outputFile = null;
         try {
             transportationSystemDataExport.exportDataToFile();
-            outputFile = transportationSystemDataExport.getOutputFile();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+            File outputFile = transportationSystemDataExport.getOutputFile();
             if (outputFile != null) {
                 System.out.println("Data was exported to file: " + outputFile.getAbsolutePath());
             }

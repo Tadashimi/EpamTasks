@@ -1,0 +1,85 @@
+<transportation_service>
+
+    <cargoes>
+        <cargo type="FOOD">
+            <id>1_a</id>
+            <name>APPLE</name>
+            <weight>100</weight>
+            <expirationDate>11.11.2020</expirationDate>
+            <storeTemperature>-50</storeTemperature>
+        </cargo>
+        <cargo type="CLOTHERS">
+            <id>2_a</id>
+            <name>JEANS</name>
+            <weight>200</weight>
+            <size>XXL</size>
+            <material>COTTON</material>
+        </cargo>
+        <cargo type="FOOD">
+            <id>3_a</id>
+            <name>ORANGE</name>
+            <weight>300</weight>
+            <expirationDate>20.12.2025</expirationDate>
+            <storeTemperature>-20</storeTemperature>
+        </cargo>
+        <cargo type="CLOTHERS">
+            <id>4_a</id>
+            <name>Clothers_Name_1</name>
+            <weight>150</weight>
+            <size>L</size>
+            <material>LINEN</material>
+        </cargo>
+        <cargo type="FOOD">
+            <id>5_a</id>
+            <name>BANANA</name>
+            <weight>500</weight>
+            <expirationDate>20.12.2020</expirationDate>
+            <storeTemperature>10</storeTemperature>
+        </cargo>
+        <cargo type="CLOTHERS">
+            <id>6_a</id>
+            <name>SOCKS</name>
+            <weight>800</weight>
+            <size>-</size>
+            <material>COTTON</material>
+        </cargo>
+    </cargoes>
+
+    <carriers>
+        <carrier type="SHIP">
+            <id>1_b</id>
+            <name>Carrier_Name</name>
+            <address>Spb, Nevskiy 800</address>
+        </carrier>
+        <carrier type="PLANE">
+            <id>2_b</id>
+            <name>Carrier_Name</name>
+            <address>Sp, Prosveheniya 900</address>
+        </carrier>
+    </carriers>
+
+    <transportations>
+        <transportation>
+            <cargo_id>1_a</cargo_id>
+            <carrier_id>1_b</carrier_id>
+            <description>Vip order</description>
+            <billTo>Ivanov</billTo>
+            <date>11.11.2010</date>
+        </transportation>
+        <transportation>
+            <cargo_id>2_a</cargo_id>
+            <carrier_id>1_b</carrier_id>
+            <description>Fragile</description>
+            <billTo>Petrov</billTo>
+            <date>11.11.2011</date>
+        </transportation>
+        <transportation>
+            <cargo_id>6_a</cargo_id>
+            <carrier_id>2_b</carrier_id>
+            <description>Fragile</description>
+            <billTo>Sidorov</billTo>
+            <date>01.01.2017</date>
+        </transportation>
+    </transportations>
+
+</transportation_service>

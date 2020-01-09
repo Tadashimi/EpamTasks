@@ -1,4 +1,4 @@
-package Task12_TransportationWithXMLandExportToFile.dataExport.impl;
+package Task12_TransportationWithXMLandExportToFile.report.impl;
 
 import Task12_TransportationWithXMLandExportToFile.cargo.domain.Cargo;
 import Task12_TransportationWithXMLandExportToFile.cargo.domain.ClothersCargo;
@@ -7,7 +7,7 @@ import Task12_TransportationWithXMLandExportToFile.cargo.service.CargoService;
 import Task12_TransportationWithXMLandExportToFile.carrier.domain.Carrier;
 import Task12_TransportationWithXMLandExportToFile.carrier.service.CarrierService;
 import Task12_TransportationWithXMLandExportToFile.common.solutions.utils.JavaUtilDataUtils;
-import Task12_TransportationWithXMLandExportToFile.dataExport.DataExport;
+import Task12_TransportationWithXMLandExportToFile.report.ReportComponent;
 import Task12_TransportationWithXMLandExportToFile.transportation.domain.Transportation;
 import Task12_TransportationWithXMLandExportToFile.transportation.service.TransportationService;
 
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class TransportationSystemDataExport implements DataExport {
+public class TransportationsReport implements ReportComponent {
     private final String COMPONENT_SEPARATOR = "|";
     private final String CARGO_SECTION_LABEL_IN_FILE = "--Cargo section--";
     private final String CARRIER_SECTION_LABEL_IN_FILE = "--Carrier section--";
@@ -30,7 +30,7 @@ public class TransportationSystemDataExport implements DataExport {
 
     private File outputFile = null;
 
-    public TransportationSystemDataExport(CargoService cargoService, CarrierService carrierService, TransportationService transportationService) {
+    public TransportationsReport(CargoService cargoService, CarrierService carrierService, TransportationService transportationService) {
         this.cargoService = cargoService;
         this.carrierService = carrierService;
         this.transportationService = transportationService;

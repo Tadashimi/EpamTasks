@@ -10,7 +10,7 @@ import Task12_TransportationWithXMLandExportToFile.carrier.service.CarrierServic
 import Task12_TransportationWithXMLandExportToFile.common.business.exception.checked.InitStorageException;
 import Task12_TransportationWithXMLandExportToFile.common.solutions.search.OrderType;
 import Task12_TransportationWithXMLandExportToFile.common.solutions.utils.CollectionUtils;
-import Task12_TransportationWithXMLandExportToFile.dataExport.impl.TransportationSystemDataExport;
+import Task12_TransportationWithXMLandExportToFile.report.impl.TransportationsReport;
 import Task12_TransportationWithXMLandExportToFile.storage.initor.InitStorageType;
 import Task12_TransportationWithXMLandExportToFile.storage.initor.StorageInitor;
 import Task12_TransportationWithXMLandExportToFile.transportation.service.TransportationService;
@@ -152,7 +152,7 @@ public class Application {
     }
 
     private static void demoExportData() {
-        TransportationSystemDataExport transportationSystemDataExport = new TransportationSystemDataExport(cargoService, carrierService, transportationService);
+        TransportationsReport transportationSystemDataExport = new TransportationsReport(cargoService, carrierService, transportationService);
         try {
             transportationSystemDataExport.exportData();
         } catch (Exception e) {

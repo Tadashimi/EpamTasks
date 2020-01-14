@@ -1,7 +1,0 @@
-package Task12_TransportationWithXMLandExportToFile.transportation.service;
-
-import Task12_TransportationWithXMLandExportToFile.common.business.service.CommonService;
-import Task12_TransportationWithXMLandExportToFile.transportation.domain.Transportation;
-
-public interface TransportationService extends CommonService<Transportation, Long> {
-}

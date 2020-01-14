@@ -1,0 +1,7 @@
+package task12_transportation_XML_paser_and_export_to_file.transportation.service;
+
+import task12_transportation_XML_paser_and_export_to_file.common.business.service.CommonService;
+import task12_transportation_XML_paser_and_export_to_file.transportation.domain.Transportation;
+
+public interface TransportationService extends CommonService<Transportation, Long> {
+}

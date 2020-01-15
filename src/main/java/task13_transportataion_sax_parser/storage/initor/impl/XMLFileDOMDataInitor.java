@@ -26,7 +26,7 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.*;
 
 public class XMLFileDOMDataInitor extends FileDataInitor {
-    private static final String FILE = "Task13_TransportataionWithSAXParsing/init-data.xml";
+    private static final String FILE = "task13_transportataion_sax_parser/init-data.xml";
 
     @Override
     public void initStorage() throws InitStorageException {

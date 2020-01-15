@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class TextFileDataInitor extends FileDataInitor {
 
-    private static final String FILE = "Task12_TransportationWithXMLandExportToFile/init-data.txt";
+    private static final String FILE = "task12_transportation_XML_paser_and_export_to_file/init-data.txt";
     private static final String CARGO_SECTION_LABEL_IN_FILE = "--Cargo section--";
     private static final String CARRIER_SECTION_LABEL_IN_FILE = "--Carrier section--";
     private static final String TRANSPORTATION_SECTION_LABEL_IN_FILE = "--Transportation section--";

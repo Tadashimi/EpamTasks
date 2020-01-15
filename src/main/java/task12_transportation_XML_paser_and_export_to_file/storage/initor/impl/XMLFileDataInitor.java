@@ -26,7 +26,7 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.*;
 
 public class XMLFileDataInitor extends FileDataInitor {
-    private static final String FILE = "Task12_TransportationWithXMLandExportToFile/init-data.xml";
+    private static final String FILE = "task12_transportation_XML_paser_and_export_to_file/init-data.xml";
 
     @Override
     public void initStorage() throws InitStorageException {

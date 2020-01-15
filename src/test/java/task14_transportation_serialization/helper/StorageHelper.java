@@ -24,7 +24,7 @@ public class StorageHelper {
         storageInitor.initStorage();
     }
 
-    public static void serializeStorage(Path file) throws SerializationException {
+    public static void writeStorageToFile(Path file) throws SerializationException {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file.toFile()))) {
             Storage.serializeStatic(oos);
         } catch (Exception e) {
@@ -42,7 +42,7 @@ public class StorageHelper {
         Storage.transportationArray = null;
     }
 
-    public static void deserializeStorage(Path file) throws SerializationException {
+    public static void readStorageFromFile(Path file) throws SerializationException {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file.toFile()))) {
             Storage.deserializeStatic(ois);
         } catch (Exception e) {

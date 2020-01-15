@@ -4,7 +4,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import task14_transportation_serialization.application.serviceholder.StorageType;
 import task14_transportation_serialization.cargo.domain.Cargo;
 import task14_transportation_serialization.carrier.domain.Carrier;
@@ -20,7 +19,7 @@ import java.util.List;
 
 import static task14_transportation_serialization.helper.StorageHelper.*;
 
-public class StorageTest {
+public class SerializeStorageTest {
 
     private Cargo[] cargoArray;
     private List<Cargo> cargoCollection;
@@ -44,25 +43,25 @@ public class StorageTest {
     }
 
     @Test
-    public void storageBasedOnCollectionTest() throws InitStorageException, SerializationException {
+    public void serializeStorageBasedOnCollectionTest() throws InitStorageException, SerializationException {
         initStorage(StorageType.COLLECTION);
         fillExpectedData();
 
-        serializeStorage(file);
+        writeStorageToFile(file);
         removeDataFromStorage();
-        deserializeStorage(file);
+        readStorageFromFile(file);
 
         compareExpectedAndActualData();
     }
 
     @Test
-    public void storageBasedOnArrayTest() throws InitStorageException, SerializationException {
+    public void serializeStorageBasedOnArrayTest() throws InitStorageException, SerializationException {
         initStorage(StorageType.ARRAY);
         fillExpectedData();
 
-        serializeStorage(file);
+        writeStorageToFile(file);
         removeDataFromStorage();
-        deserializeStorage(file);
+        readStorageFromFile(file);
 
         compareExpectedAndActualData();
     }

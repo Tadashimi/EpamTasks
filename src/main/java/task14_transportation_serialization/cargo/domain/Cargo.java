@@ -55,20 +55,4 @@ public abstract class Cargo extends BaseEntity {
                 ", transportations=" + transportations +
                 '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cargo cargo = (Cargo) o;
-        return Objects.equals(id, cargo.id) &&
-                weight == cargo.weight &&
-                Objects.equals(name, cargo.name) &&
-                cargoType == cargo.cargoType;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, weight, cargoType);
-    }
 }

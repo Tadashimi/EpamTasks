@@ -64,21 +64,4 @@ public class Transportation extends BaseEntity {
                 ", Cargo=" + cargo.getName() +
                 '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Transportation that = (Transportation) o;
-        return Objects.equals(cargo, that.cargo) &&
-                Objects.equals(carrier, that.carrier) &&
-                Objects.equals(description, that.description) &&
-                Objects.equals(billTo, that.billTo) &&
-                Objects.equals(transportationBeginDate, that.transportationBeginDate);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(cargo, carrier, description, billTo, transportationBeginDate);
-    }
 }

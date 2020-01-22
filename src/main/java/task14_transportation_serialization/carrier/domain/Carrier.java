@@ -56,20 +56,4 @@ public class Carrier extends BaseEntity {
                 ", carrierType=" + carrierType +
                 '}';
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Carrier carrier = (Carrier) o;
-        return Objects.equals(id, carrier.id) &&
-                Objects.equals(name, carrier.name) &&
-                Objects.equals(address, carrier.address) &&
-                carrierType == carrier.carrierType;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, address, carrierType);
-    }
 }

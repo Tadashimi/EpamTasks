@@ -54,4 +54,21 @@ public class EntityGenerator {
         }
         return transportation;
     }
+
+    public static Transportation getTransportation() {
+        Cargo cargo = getFoodCargo();
+        Carrier carrier = getCarrier();
+        Transportation transportation = new Transportation();
+        transportation.setId(random.nextLong());
+        transportation.setDescription("description_" + random.nextInt());
+        transportation.setBillTo("billTo_" + random.nextInt());
+        transportation.setTransportationBeginDate(new Date());
+        if (cargo != null) {
+            transportation.setCargo(cargo);
+        }
+        if (carrier != null) {
+            transportation.setCarrier(carrier);
+        }
+        return transportation;
+    }
 }

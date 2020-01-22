@@ -6,51 +6,41 @@ import task14_transportation_serialization.cargo.domain.Cargo;
 import task14_transportation_serialization.carrier.domain.Carrier;
 import task14_transportation_serialization.transportation.domain.Transportation;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static task14_transportation_serialization.helper.EntityGenerator.*;
 import static task14_transportation_serialization.helper.SerializationHelper.getByteArrayFromObject;
 import static task14_transportation_serialization.helper.SerializationHelper.getObjectFromByteArray;
 
 public class EntitySerializationTest {
+    private Cargo cargo;
+    private Carrier carrier;
+    private Transportation transportation;
 
-    @Test
-    public void foodCargoSerializationTest() {
-        Cargo expectedCargo = getFoodCargo();
 
-        byte[] byteArrayForObject = getByteArrayFromObject(expectedCargo);
-        Cargo actualCargo = (Cargo) getObjectFromByteArray(byteArrayForObject);
-
-        Assertions.assertEquals(expectedCargo, actualCargo);
-    }
-
-    @Test
-    public void clothersCargoSerializationTest() {
-        Cargo expectedCargo = getClothersCargo();
-
-        byte[] byteArrayForObject = getByteArrayFromObject(expectedCargo);
-        Cargo actualCargo = (Cargo) getObjectFromByteArray(byteArrayForObject);
-
-        Assertions.assertEquals(expectedCargo, actualCargo);
-    }
 
     @Test
     public void carrierSerializationTest() {
-        Carrier expectedCarrier = getCarrier();
+        carrier = getCarrier();
+        transportation = getTransportation(null, carrier);
+        carrier.setTransportations(Arrays.asList(transportation));
 
-        byte[] byteArrayForObject = getByteArrayFromObject(expectedCarrier);
+        byte[] byteArrayForObject = getByteArrayFromObject(carrier);
         Carrier actualCarrier = (Carrier) getObjectFromByteArray(byteArrayForObject);
 
-        Assertions.assertEquals(expectedCarrier, actualCarrier);
+        Assertions.assertEquals(carrier, actualCarrier);
     }
 
     @Test
     public void transportationSerializationTest() {
-        Cargo cargo = getFoodCargo();
-        Carrier carrier = getCarrier();
-        Transportation expectedTransportation = getTransportation(cargo, carrier);
+        cargo = getFoodCargo();
+        carrier = getCarrier();
+        transportation = getTransportation(cargo, carrier);
 
-        byte[] byteArrayForObject = getByteArrayFromObject(expectedTransportation);
+        byte[] byteArrayForObject = getByteArrayFromObject(transportation);
         Transportation actualTransportation = (Transportation) getObjectFromByteArray(byteArrayForObject);
 
-        Assertions.assertEquals(expectedTransportation, actualTransportation);
+        Assertions.assertEquals(transportation, actualTransportation);
     }
 }

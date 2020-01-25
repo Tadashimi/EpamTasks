@@ -1,43 +1,37 @@
-<transportation_service>
+<data>
 
     <cargoes>
-        <cargo type="FOOD">
-            <id>1_a</id>
+        <cargo id="1_a" type="FOOD">
             <name>APPLE</name>
             <weight>100</weight>
             <expirationDate>11.11.2020</expirationDate>
             <storeTemperature>-50</storeTemperature>
         </cargo>
-        <cargo type="CLOTHERS">
-            <id>2_a</id>
+        <cargo id="2_a" type="CLOTHERS">
             <name>JEANS</name>
             <weight>200</weight>
             <size>XXL</size>
             <material>COTTON</material>
         </cargo>
-        <cargo type="FOOD">
-            <id>3_a</id>
+        <cargo id="3_a" type="FOOD">
             <name>ORANGE</name>
             <weight>300</weight>
             <expirationDate>20.12.2025</expirationDate>
             <storeTemperature>-20</storeTemperature>
         </cargo>
-        <cargo type="CLOTHERS">
-            <id>4_a</id>
+        <cargo id="4_a" type="CLOTHERS">
             <name>Clothers_Name_1</name>
             <weight>150</weight>
             <size>L</size>
             <material>LINEN</material>
         </cargo>
-        <cargo type="FOOD">
-            <id>5_a</id>
+        <cargo id="5_a" type="FOOD">
             <name>BANANA</name>
             <weight>500</weight>
             <expirationDate>20.12.2020</expirationDate>
             <storeTemperature>10</storeTemperature>
         </cargo>
-        <cargo type="CLOTHERS">
-            <id>6_a</id>
+        <cargo id="6_a" type="CLOTHERS">
             <name>SOCKS</name>
             <weight>800</weight>
             <size>-</size>
@@ -46,40 +40,34 @@
     </cargoes>
 
     <carriers>
-        <carrier type="SHIP">
-            <id>1_b</id>
+        <carrier id="1_b">
             <name>Carrier_Name</name>
             <address>Spb, Nevskiy 800</address>
+            <type>SHIP</type>
         </carrier>
-        <carrier type="PLANE">
-            <id>2_b</id>
+        <carrier id="2_b">
             <name>Carrier_Name</name>
             <address>Sp, Prosveheniya 900</address>
+            <type>PLANE</type>
         </carrier>
     </carriers>
 
     <transportations>
-        <transportation>
-            <cargo_id>1_a</cargo_id>
-            <carrier_id>1_b</carrier_id>
+        <transportation cargoref="1_a" carrierref="1_b">
             <description>Vip order</description>
-            <billTo>Ivanov</billTo>
-            <date>11.11.2010</date>
+            <billto>Ivanov</billto>
+            <transportationBeginDate>11.11.2010</transportationBeginDate>
         </transportation>
-        <transportation>
-            <cargo_id>2_a</cargo_id>
-            <carrier_id>1_b</carrier_id>
+        <transportation cargoref="2_a" carrierref="1_b">
             <description>Fragile</description>
-            <billTo>Petrov</billTo>
-            <date>11.11.2011</date>
+            <billto>Petrov</billto>
+            <transportationBeginDate>11.11.2011</transportationBeginDate>
         </transportation>
-        <transportation>
-            <cargo_id>6_a</cargo_id>
-            <carrier_id>2_b</carrier_id>
+        <transportation cargoref="6_a" carrierref="2_b">
             <description>Fragile</description>
-            <billTo>Sidorov</billTo>
-            <date>01.01.2017</date>
+            <billto>Sidorov</billto>
+            <transportationBeginDate>01.01.2017</transportationBeginDate>
         </transportation>
     </transportations>
 
-</transportation_service>
+</data>

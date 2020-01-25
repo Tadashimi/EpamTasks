@@ -43,7 +43,7 @@ public class Application {
             carrierService = ServiceHolder.getInstance().getCarrierService();
             transportationService = ServiceHolder.getInstance().getTransportationService();
 
-            StorageInitor storageInitor = getStorageInitor(InitStorageType.TEXT_FILE);
+            StorageInitor storageInitor = getStorageInitor(InitStorageType.CONCURRENT_INITOR);
             storageInitor.initStorage();
 
             printStorageData();

@@ -25,6 +25,9 @@ public final class StorageInitorFactory {
             case XML_SAX_FILE: {
                 return new XmlSaxFileDataInitor();
             }
+            case CONCURRENT_INITOR: {
+                return new ConcurrentInitor();
+            }
             default: {
                 throw new RuntimeException("Unknown storage init type " + initStorageType);
             }

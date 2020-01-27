@@ -5,8 +5,6 @@ import task16_transportation_lambda.transportation.repo.TransportationRepo;
 
 import java.util.List;
 
-import static task16_transportation_lambda.common.solutions.utils.EntityUtils.entityIsNullPredicate;
-
 public class TransportationServiceImpl implements TransportationService {
 
     private TransportationRepo transportationRepo;
@@ -44,7 +42,7 @@ public class TransportationServiceImpl implements TransportationService {
 
     @Override
     public boolean update(Transportation transportation) {
-        if (entityIsNullPredicate(false).test(transportation)) {
+        if (transportation != null) {
             return transportationRepo.update(transportation);
         }
 

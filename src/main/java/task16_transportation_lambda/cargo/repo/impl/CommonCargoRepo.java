@@ -27,7 +27,7 @@ public abstract class CommonCargoRepo implements CargoRepo {
 
         //NAME, WEIGHT
         for (CargoField cargoField : FIELDS_ORDER_TO_SORT_CARGOS) {
-            if (searchCondition.shouldSortByField(cargoField)) {
+            if (searchCondition.shouldSortByField().test(cargoField)) {
 
                 if (result == null) {
                     result = getComparatorForCargoField(cargoField);
@@ -36,7 +36,6 @@ public abstract class CommonCargoRepo implements CargoRepo {
                 }
             }
         }
-
 
         return result;
     }

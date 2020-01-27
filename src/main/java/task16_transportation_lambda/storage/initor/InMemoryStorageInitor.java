@@ -18,7 +18,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static task16_transportation_lambda.common.solutions.utils.CollectionUtils.collectionIsEmptyPredicate;
 import static task16_transportation_lambda.common.solutions.utils.EntityUtils.entitiesIdsAreEqualsPredicate;
-import static task16_transportation_lambda.common.solutions.utils.EntityUtils.entityIsNullPredicate;
 
 public class InMemoryStorageInitor implements StorageInitor {
 
@@ -108,7 +107,7 @@ public class InMemoryStorageInitor implements StorageInitor {
         if (collectionIsEmptyPredicate(false).test(cargos) &&
                 collectionIsEmptyPredicate(false).test(transportations)) {
             cargos.forEach((cargo) -> {
-                if (entityIsNullPredicate(false).test(cargo)) {
+                if (cargo != null) {
                     appendTransportationsToCargo(cargo, transportations);
                 }
             });
@@ -119,13 +118,13 @@ public class InMemoryStorageInitor implements StorageInitor {
                                               List<Transportation> transportations) {
         List<Transportation> cargoTransportations = cargo.getTransportations();
 
-        if (entityIsNullPredicate(true).test(cargoTransportations)) {
+        if (cargoTransportations == null) {
             cargoTransportations = new ArrayList<>();
         }
 
         for (Transportation transportation : transportations) {
-            if (entityIsNullPredicate(false).test(transportation) &&
-                    entityIsNullPredicate(false).test(transportation.getCargo()) &&
+            if (transportation != null &&
+                    transportation.getCargo() != null &&
                     entitiesIdsAreEqualsPredicate(cargo).test(transportation.getCargo())) {
                 cargoTransportations.add(transportation);
             }

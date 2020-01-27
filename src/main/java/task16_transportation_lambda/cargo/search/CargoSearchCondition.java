@@ -4,6 +4,7 @@ import task16_transportation_lambda.cargo.domain.CargoField;
 import task16_transportation_lambda.common.solutions.search.OrderType;
 
 import java.util.Set;
+import java.util.function.Predicate;
 
 public class CargoSearchCondition {
 
@@ -32,8 +33,8 @@ public class CargoSearchCondition {
         this.sortFields = sortFields;
     }
 
-    public boolean shouldSortByField(CargoField cargoField) {
-        return sortFields != null && sortFields.contains(cargoField);
+    public Predicate<CargoField> shouldSortByField() {
+        return cargoField -> sortFields != null && sortFields.contains(cargoField);
     }
 
     public boolean isAscOrdering() {

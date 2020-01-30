@@ -3,11 +3,11 @@ package task18_transportation_local_date_and_streams.common.solutions.utils;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public final class JavaUtilDateUtils {
+public final class JavaLocalDateUtils {
 
     private static final String PATTERN = "dd.MM.yyyy";
 
-    private JavaUtilDateUtils() {
+    private JavaLocalDateUtils() {
 
     }
 

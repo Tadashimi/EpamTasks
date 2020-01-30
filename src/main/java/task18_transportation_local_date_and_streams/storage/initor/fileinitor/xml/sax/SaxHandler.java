@@ -9,7 +9,7 @@ import task18_transportation_local_date_and_streams.cargo.domain.ClothersCargo;
 import task18_transportation_local_date_and_streams.cargo.domain.FoodCargo;
 import task18_transportation_local_date_and_streams.carrier.domain.Carrier;
 import task18_transportation_local_date_and_streams.carrier.domain.CarrierType;
-import task18_transportation_local_date_and_streams.common.solutions.utils.JavaUtilDateUtils;
+import task18_transportation_local_date_and_streams.common.solutions.utils.JavaLocalDateUtils;
 import task18_transportation_local_date_and_streams.storage.initor.fileinitor.BaseFileInitor;
 import task18_transportation_local_date_and_streams.transportation.domain.Transportation;
 
@@ -130,7 +130,7 @@ public class SaxHandler extends DefaultHandler {
     private void fillFoodCargoWithData(FoodCargo foodCargo, String tagPath, String content) throws ParseException {
         switch (tagPath) {
             case CargoPaths.EXPIRATION_DATE: {
-                foodCargo.setExpirationDate(JavaUtilDateUtils.valueOf(content));
+                foodCargo.setExpirationDate(JavaLocalDateUtils.valueOf(content));
                 break;
             }
             case CargoPaths.STORE_TEMPERATURE: {
@@ -182,7 +182,7 @@ public class SaxHandler extends DefaultHandler {
                 break;
             }
             case TransportationPaths.TRANSPORTATION_BEGIN_DATE: {
-                transportation.setTransportationBeginDate(JavaUtilDateUtils.valueOf(content));
+                transportation.setTransportationBeginDate(JavaLocalDateUtils.valueOf(content));
                 break;
             }
         }

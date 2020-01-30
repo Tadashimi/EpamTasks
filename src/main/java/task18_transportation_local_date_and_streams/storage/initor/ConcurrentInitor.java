@@ -12,7 +12,7 @@ import task18_transportation_local_date_and_streams.carrier.domain.Carrier;
 import task18_transportation_local_date_and_streams.carrier.domain.CarrierType;
 import task18_transportation_local_date_and_streams.common.business.exception.checked.InitStorageException;
 import task18_transportation_local_date_and_streams.common.solutions.utils.FileUtils;
-import task18_transportation_local_date_and_streams.common.solutions.utils.JavaUtilDateUtils;
+import task18_transportation_local_date_and_streams.common.solutions.utils.JavaLocalDateUtils;
 import task18_transportation_local_date_and_streams.common.solutions.utils.xml.dom.XmlDomUtils;
 import task18_transportation_local_date_and_streams.storage.initor.fileinitor.BaseFileInitor;
 import task18_transportation_local_date_and_streams.transportation.domain.Transportation;
@@ -76,7 +76,7 @@ public class ConcurrentInitor extends BaseFileInitor {
             Cargo cargo;
             if (CargoType.FOOD.equals(cargoType)) {
                 FoodCargo foodCargo = new FoodCargo();
-                LocalDate expirationDate = JavaUtilDateUtils
+                LocalDate expirationDate = JavaLocalDateUtils
                         .valueOf(getOnlyElementTextContent(cargoElem, "expirationDate"));
                 foodCargo.setExpirationDate(expirationDate);
                 foodCargo.setStoreTemperature(
@@ -181,7 +181,7 @@ public class ConcurrentInitor extends BaseFileInitor {
             transportation.setBillTo(getOnlyElementTextContent(transportationElement, "billto"));
             transportation.setDescription(getOnlyElementTextContent(transportationElement, "description"));
             String beginDataStr = getOnlyElementTextContent(transportationElement, "transportationBeginDate");
-            transportation.setTransportationBeginDate(JavaUtilDateUtils.valueOf(beginDataStr));
+            transportation.setTransportationBeginDate(JavaLocalDateUtils.valueOf(beginDataStr));
             result.setTransportation(transportation);
 
             return result;

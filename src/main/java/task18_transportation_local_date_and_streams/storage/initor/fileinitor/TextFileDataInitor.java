@@ -8,7 +8,7 @@ import task18_transportation_local_date_and_streams.carrier.domain.Carrier;
 import task18_transportation_local_date_and_streams.carrier.domain.CarrierType;
 import task18_transportation_local_date_and_streams.common.business.exception.checked.InitStorageException;
 import task18_transportation_local_date_and_streams.common.solutions.utils.FileUtils;
-import task18_transportation_local_date_and_streams.common.solutions.utils.JavaUtilDateUtils;
+import task18_transportation_local_date_and_streams.common.solutions.utils.JavaLocalDateUtils;
 import task18_transportation_local_date_and_streams.transportation.domain.Transportation;
 
 import java.io.BufferedReader;
@@ -90,7 +90,7 @@ public class TextFileDataInitor extends BaseFileInitor {
                 cargo = clothersCargo;
             } else {
                 FoodCargo foodCargo = new FoodCargo();
-                foodCargo.setExpirationDate(JavaUtilDateUtils.valueOf(cargoData[index++].trim()));
+                foodCargo.setExpirationDate(JavaLocalDateUtils.valueOf(cargoData[index++].trim()));
                 foodCargo.setStoreTemperature(Integer.parseInt(cargoData[index].trim()));
                 cargo = foodCargo;
             }
@@ -162,7 +162,7 @@ public class TextFileDataInitor extends BaseFileInitor {
             Transportation transportation = new Transportation();
             transportation.setDescription(data[index++].trim());
             transportation.setBillTo(data[index++].trim());
-            transportation.setTransportationBeginDate(JavaUtilDateUtils.valueOf(data[index].trim()));
+            transportation.setTransportationBeginDate(JavaLocalDateUtils.valueOf(data[index].trim()));
             result.setTransportation(transportation);
         }
 

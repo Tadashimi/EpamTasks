@@ -3,9 +3,7 @@ package task17_transportation_optional.cargo.domain;
 import task17_transportation_optional.common.business.domain.BaseEntity;
 import task17_transportation_optional.transportation.domain.Transportation;
 
-import java.io.Serializable;
 import java.util.List;
-import java.util.Objects;
 
 public abstract class Cargo extends BaseEntity {
     private static final long serialVersionUID = 101L;

@@ -5,7 +5,6 @@ import task17_transportation_optional.common.business.domain.BaseEntity;
 import task17_transportation_optional.transportation.domain.Transportation;
 
 import java.util.List;
-import java.util.Objects;
 
 public class Carrier extends BaseEntity {
     private static final long serialVersionUID = 103L;

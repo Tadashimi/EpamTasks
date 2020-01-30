@@ -5,7 +5,6 @@ import task17_transportation_optional.carrier.domain.Carrier;
 import task17_transportation_optional.common.business.domain.BaseEntity;
 
 import java.util.Date;
-import java.util.Objects;
 
 public class Transportation extends BaseEntity {
     private static final long serialVersionUID = 102L;

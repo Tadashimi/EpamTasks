@@ -26,13 +26,12 @@ public class CarrierServiceImpl implements CarrierService {
     }
 
     @Override
-    public Carrier findById(Long id) {
+    public Optional<Carrier> findById(Long id) {
         if (id != null) {
-            Optional<Carrier> carrier = carrierRepo.findById(id);
-            return carrier.orElseThrow(() -> new ElementNotFoundException("Cannot find carrier by id: '" + id + "'"));
+            return carrierRepo.findById(id);
         }
 
-        return null;
+        return Optional.empty();
     }
 
     @Override

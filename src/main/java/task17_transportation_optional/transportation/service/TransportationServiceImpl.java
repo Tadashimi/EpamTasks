@@ -1,6 +1,5 @@
 package task17_transportation_optional.transportation.service;
 
-import task17_transportation_optional.common.business.exception.unchecked.ElementNotFoundException;
 import task17_transportation_optional.transportation.domain.Transportation;
 import task17_transportation_optional.transportation.repo.TransportationRepo;
 
@@ -33,13 +32,12 @@ public class TransportationServiceImpl implements TransportationService {
     }
 
     @Override
-    public Transportation findById(Long id) {
+    public Optional<Transportation> findById(Long id) {
         if (id != null) {
-            Optional<Transportation> transportation = transportationRepo.findById(id);
-            return transportation.orElseThrow(() -> new ElementNotFoundException("Cannot find transportation by id: '" + id + "'"));
+            return transportationRepo.findById(id);
         }
 
-        return null;
+        return Optional.empty();
     }
 
     @Override

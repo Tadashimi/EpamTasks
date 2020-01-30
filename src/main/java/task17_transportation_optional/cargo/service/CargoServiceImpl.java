@@ -4,7 +4,6 @@ import task17_transportation_optional.cargo.domain.Cargo;
 import task17_transportation_optional.cargo.exception.unckecked.CargoDeleteConstraintViolationException;
 import task17_transportation_optional.cargo.repo.CargoRepo;
 import task17_transportation_optional.cargo.search.CargoSearchCondition;
-import task17_transportation_optional.common.business.exception.unchecked.ElementNotFoundException;
 import task17_transportation_optional.transportation.domain.Transportation;
 
 import java.util.Arrays;
@@ -26,21 +25,19 @@ public class CargoServiceImpl implements CargoService {
     }
 
     @Override
-    public Cargo findById(Long id) {
+    public Optional<Cargo> findById(Long id) {
         if (id != null) {
-            Optional<Cargo> cargo = cargoRepo.findById(id);
-            return cargo.orElseThrow(() -> new ElementNotFoundException("Cannot find cargo by id: '" + id + "'"));
+            return cargoRepo.findById(id);
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
-    public Cargo getByIdFetchingTransportations(Long id) {
+    public Optional<Cargo> getByIdFetchingTransportations(Long id) {
         if (id != null) {
-            Optional<Cargo> cargo = cargoRepo.getByIdFetchingTransportations(id);
-            return cargo.orElseThrow(() -> new ElementNotFoundException("Cannot find cargo by id: '" + id + "'"));
+            return cargoRepo.getByIdFetchingTransportations(id);
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -61,10 +58,10 @@ public class CargoServiceImpl implements CargoService {
 
     @Override
     public boolean deleteById(Long id) {
-        Cargo cargo = this.getByIdFetchingTransportations(id);
+        Optional<Cargo> cargo = this.getByIdFetchingTransportations(id);
 
-        if (cargo != null) {
-            List<Transportation> transportations = cargo.getTransportations();
+        if (cargo.isPresent()) {
+            List<Transportation> transportations = cargo.get().getTransportations();
             boolean hasTransportations = transportations != null && transportations.size() > 0;
             if (hasTransportations) {
                 throw new CargoDeleteConstraintViolationException(id);

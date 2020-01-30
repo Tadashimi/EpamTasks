@@ -1,9 +1,10 @@
 package task17_transportation_optional.common.business.service;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CommonService<TYPE, ID> {
-    TYPE findById(ID id);
+    Optional<TYPE> findById(ID id);
 
     void save(TYPE entity);
 

@@ -1,0 +1,7 @@
+package task18_transportation_local_date_and_streams.transportation.repo;
+
+import task18_transportation_local_date_and_streams.common.business.repo.CommonRepo;
+import task18_transportation_local_date_and_streams.transportation.domain.Transportation;
+
+public interface TransportationRepo extends CommonRepo<Transportation, Long> {
+}

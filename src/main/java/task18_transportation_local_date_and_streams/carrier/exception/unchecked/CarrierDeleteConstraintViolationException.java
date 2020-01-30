@@ -1,0 +1,16 @@
+package task18_transportation_local_date_and_streams.carrier.exception.unchecked;
+
+import task18_transportation_local_date_and_streams.common.business.exception.unchecked.OurCompanyUncheckedException;
+
+public class CarrierDeleteConstraintViolationException extends OurCompanyUncheckedException {
+
+    private static final String MESSAGE = "Cant delete carrier with id '%s'. There are transportations which relates to it!";
+
+    public CarrierDeleteConstraintViolationException(String message) {
+        super(message);
+    }
+
+    public CarrierDeleteConstraintViolationException(long carrierId) {
+        this(String.format(MESSAGE, carrierId));
+    }
+}

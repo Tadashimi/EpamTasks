@@ -1,0 +1,7 @@
+package task18_transportation_local_date_and_streams.transportation.service;
+
+import task18_transportation_local_date_and_streams.common.business.service.CommonService;
+import task18_transportation_local_date_and_streams.transportation.domain.Transportation;
+
+public interface TransportationService extends CommonService<Transportation, Long> {
+}

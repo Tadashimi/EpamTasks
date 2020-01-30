@@ -14,6 +14,7 @@ import task17_transportation_optional.transportation.service.TransportationServi
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static task17_transportation_optional.common.solutions.utils.CollectionUtils.collectionIsEmptyPredicate;
@@ -93,8 +94,10 @@ public class InMemoryStorageInitor implements StorageInitor {
 
     private Transportation createTransportation(long cargoId, long carrierId) {
         Transportation transportation = new Transportation();
-        transportation.setCargo(cargoService.findById(cargoId));
-        transportation.setCarrier(carrierService.findById(carrierId));
+        Optional<Cargo> cargo = cargoService.findById(cargoId);
+        cargo.ifPresent(transportation::setCargo);
+        Optional<Carrier> carrier = carrierService.findById(carrierId);
+        carrier.ifPresent(transportation::setCarrier);
         transportation.setDescription("Transportation");
 
         return transportation;

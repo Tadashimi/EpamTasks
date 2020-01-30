@@ -37,9 +37,9 @@ public class CargoArrayRepoImpl extends CommonCargoRepo {
         Cargo[] result = new Cargo[cargoArray.length];
 
         int curIndex = 0;
-        for (Cargo carrier : cargoArray) {
-            if (carrier != null && Objects.equals(carrier.getName(), name)) {
-                result[curIndex++] = carrier;
+        for (Cargo cargo : cargoArray) {
+            if (cargo != null && Objects.equals(cargo.getName(), name)) {
+                result[curIndex++] = cargo;
             }
         }
 

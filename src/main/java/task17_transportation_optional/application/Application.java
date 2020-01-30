@@ -18,10 +18,7 @@ import task17_transportation_optional.storage.initor.InitStorageType;
 import task17_transportation_optional.storage.initor.StorageInitor;
 import task17_transportation_optional.transportation.service.TransportationService;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
+import java.util.*;
 
 import static java.util.Collections.singletonList;
 import static task17_transportation_optional.cargo.domain.CargoField.NAME;
@@ -145,34 +142,25 @@ public class Application {
 
     private static void demoDeleteElement() {
         System.out.println("\n------Demo  delete element------------\n");
-        Cargo cargoWithoutTransportation = cargoService.getByIdFetchingTransportations(5L);
-        System.out.println("Try to delete cargo");
-        System.out.println("Cargo details:");
-        System.out.println("id: " + cargoWithoutTransportation.getId());
-        System.out.println("name: " + cargoWithoutTransportation.getName());
-        System.out.println("total transportations: " + (cargoWithoutTransportation.getTransportations() != null ? cargoWithoutTransportation
-                .getTransportations().size() : 0));
-        System.out.println();
-        try {
-            cargoService.deleteById(cargoWithoutTransportation.getId());
-            System.out.println("Cargo was deleted");
-        } catch (Exception e) {
-            System.out.println("OOPS, something went wrong!");
-            System.out.println(e.getMessage());
-        }
+        Optional<Cargo> cargoWithoutTransportation = cargoService.getByIdFetchingTransportations(5L);
+        cargoWithoutTransportation.ifPresent(Application::deleteCargo);
         printSeparator();
 
         Long firstCargo = cargoService.getAll().get(0).getId();
-        Cargo cargoWithTransportation = cargoService.getByIdFetchingTransportations(firstCargo);
+        Optional<Cargo> cargoWithTransportation = cargoService.getByIdFetchingTransportations(firstCargo);
+        cargoWithTransportation.ifPresent(Application::deleteCargo);
+    }
+
+    private static void deleteCargo(Cargo cargo) {
         System.out.println("Try to delete cargo");
         System.out.println("Cargo details:");
-        System.out.println("id: " + cargoWithTransportation.getId());
-        System.out.println("name: " + cargoWithTransportation.getName());
-        System.out.println("total transportations: " + (cargoWithTransportation.getTransportations() != null ? cargoWithTransportation
-                .getTransportations().size() : 0));
+        System.out.println("id: " + cargo.getId());
+        System.out.println("name: " + cargo.getName());
+        System.out.println("total transportations: " + (cargo.getTransportations() != null ?
+                cargo.getTransportations().size() : 0));
         System.out.println();
         try {
-            cargoService.deleteById(cargoWithTransportation.getId());
+            cargoService.deleteById(cargo.getId());
         } catch (Exception e) {
             System.out.println("OOPS, something went wrong!");
             System.out.println(e.getMessage());

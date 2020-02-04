@@ -5,19 +5,15 @@ import java.time.format.DateTimeFormatter;
 
 public final class JavaLocalDateUtils {
 
-    private static final String PATTERN = "dd.MM.yyyy";
+    private static final String DEFAULT_PATTERN = "dd.MM.yyyy";
+    private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern(DEFAULT_PATTERN);
 
     private JavaLocalDateUtils() {
 
     }
 
-    public static LocalDate valueOf(String dateStr, String pattern) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
-        return LocalDate.parse(dateStr, formatter);
-    }
-
     public static LocalDate valueOf(String dateStr) {
-        return valueOf(dateStr, PATTERN);
+        return LocalDate.parse(dateStr, DEFAULT_FORMATTER);
     }
 
 }

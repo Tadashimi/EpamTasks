@@ -1,15 +1,9 @@
 --Creating cargo
-CREATE TABLE public.cargo_type (
-  id BIGSERIAL NOT NULL,
-  name VARCHAR(100) NOT NULL,
-  PRIMARY KEY (id)
-);
-
 CREATE TABLE public.cargo (
   id BIGSERIAL NOT NULL,
   name VARCHAR(100),
   weight INT,
-  type_id BIGINT REFERENCES public.cargo_type(id),
+  type VARCHAR(100),
   stored_temperature INT,
   expiration_date DATE,
   size VARCHAR(100),
@@ -18,17 +12,11 @@ CREATE TABLE public.cargo (
 );
 
 --Creating carrier
-CREATE TABLE public.carrier_type (
-  id BIGSERIAL NOT NULL,
-  name VARCHAR(100),
-  PRIMARY KEY (id)
-);
-
 CREATE TABLE public.carrier (
   id BIGSERIAL NOT NULL,
   name VARCHAR(100),
   address VARCHAR(300),
-  type_id BIGINT REFERENCES public.carrier_type(id),
+  type VARCHAR(100),
   PRIMARY KEY (id)
 );
 

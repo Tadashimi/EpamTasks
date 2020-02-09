@@ -3,6 +3,7 @@ package task20_transportation_data_base.carrier.service;
 import task20_transportation_data_base.carrier.domain.Carrier;
 import task20_transportation_data_base.carrier.exception.unchecked.CarrierDeleteConstraintViolationException;
 import task20_transportation_data_base.carrier.repo.CarrierRepo;
+import task20_transportation_data_base.carrier.repo.impl.CarrierDBRepoImpl;
 import task20_transportation_data_base.transportation.domain.Transportation;
 
 import java.util.Arrays;
@@ -89,5 +90,9 @@ public class CarrierServiceImpl implements CarrierService {
         }
 
         return false;
+    }
+
+    public int saveSeveralCarriers(List<Carrier> carriers) throws Exception {
+        return ((CarrierDBRepoImpl) carrierRepo).saveSeveralCarriers(carriers);
     }
 }

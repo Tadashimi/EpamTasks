@@ -50,7 +50,6 @@ public abstract class Cargo extends BaseEntity {
                 ", name='" + name + '\'' +
                 ", weight=" + weight +
                 ", cargoType=" + cargoType +
-                ", transportations=" + transportations +
                 '}';
     }
 }

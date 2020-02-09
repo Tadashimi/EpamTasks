@@ -7,10 +7,12 @@ import task20_transportation_data_base.cargo.service.CargoService;
 import task20_transportation_data_base.cargo.service.CargoServiceImpl;
 import task20_transportation_data_base.carrier.repo.impl.CarrierArrayRepoImpl;
 import task20_transportation_data_base.carrier.repo.impl.CarrierCollectionRepoImpl;
+import task20_transportation_data_base.carrier.repo.impl.CarrierDBRepoImpl;
 import task20_transportation_data_base.carrier.service.CarrierService;
 import task20_transportation_data_base.carrier.service.CarrierServiceImpl;
 import task20_transportation_data_base.transportation.repo.impl.TransportationArrayRepoImpl;
 import task20_transportation_data_base.transportation.repo.impl.TransportationCollectionRepoImpl;
+import task20_transportation_data_base.transportation.repo.impl.TransportationDBRepoImpl;
 import task20_transportation_data_base.transportation.service.TransportationService;
 import task20_transportation_data_base.transportation.service.TransportationServiceImpl;
 
@@ -65,9 +67,9 @@ public final class ServiceHolder {
 
             case DB: {
                 return new SimpleServiceHolder(
-                        new CarrierServiceImpl(new CarrierCollectionRepoImpl()),
+                        new CarrierServiceImpl(new CarrierDBRepoImpl()),
                         new CargoServiceImpl(new CargoDBRepoImpl()),
-                        new TransportationServiceImpl(new TransportationCollectionRepoImpl()));
+                        new TransportationServiceImpl(new TransportationDBRepoImpl()));
             }
 
             default: {

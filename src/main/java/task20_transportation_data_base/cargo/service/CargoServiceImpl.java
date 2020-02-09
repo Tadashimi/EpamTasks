@@ -3,6 +3,7 @@ package task20_transportation_data_base.cargo.service;
 import task20_transportation_data_base.cargo.domain.Cargo;
 import task20_transportation_data_base.cargo.exception.unckecked.CargoDeleteConstraintViolationException;
 import task20_transportation_data_base.cargo.repo.CargoRepo;
+import task20_transportation_data_base.cargo.repo.impl.CargoDBRepoImpl;
 import task20_transportation_data_base.cargo.search.CargoSearchCondition;
 import task20_transportation_data_base.transportation.domain.Transportation;
 
@@ -91,5 +92,9 @@ public class CargoServiceImpl implements CargoService {
     @Override
     public List<Cargo> search(CargoSearchCondition cargoSearchCondition) {
         return cargoRepo.search(cargoSearchCondition);
+    }
+
+    public int saveSeveralCargoes(List<Cargo> cargos) throws Exception {
+        return ((CargoDBRepoImpl) cargoRepo).saveSeveralCargoes(cargos);
     }
 }

@@ -6,7 +6,10 @@ import task20_transportation_data_base.cargo.domain.Cargo;
 import task20_transportation_data_base.cargo.domain.CargoField;
 import task20_transportation_data_base.cargo.search.CargoSearchCondition;
 import task20_transportation_data_base.cargo.service.CargoService;
+import task20_transportation_data_base.cargo.service.CargoServiceImpl;
+import task20_transportation_data_base.carrier.domain.Carrier;
 import task20_transportation_data_base.carrier.service.CarrierService;
+import task20_transportation_data_base.carrier.service.CarrierServiceImpl;
 import task20_transportation_data_base.common.business.exception.checked.InitStorageException;
 import task20_transportation_data_base.common.business.exception.checked.ReportException;
 import task20_transportation_data_base.common.solutions.search.OrderType;
@@ -15,6 +18,7 @@ import task20_transportation_data_base.reporting.ReportDefaultService;
 import task20_transportation_data_base.reporting.ReportService;
 import task20_transportation_data_base.storage.initor.InitStorageType;
 import task20_transportation_data_base.storage.initor.StorageInitor;
+import task20_transportation_data_base.transportation.domain.Transportation;
 import task20_transportation_data_base.transportation.service.TransportationService;
 
 import java.util.*;
@@ -24,6 +28,8 @@ import static task20_transportation_data_base.cargo.domain.CargoField.NAME;
 import static task20_transportation_data_base.cargo.domain.CargoField.WEIGHT;
 import static task20_transportation_data_base.common.solutions.search.OrderType.ASC;
 import static task20_transportation_data_base.common.solutions.search.OrderType.DESC;
+import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.createCarrier;
+import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.createClothersCargo;
 import static task20_transportation_data_base.storage.initor.StorageInitorFactory.getStorageInitor;
 
 public class Application {
@@ -35,7 +41,8 @@ public class Application {
 
     public static void main(String[] args) {
         try {
-            ServiceHolder.initServiceHolder(StorageType.DB);
+            StorageType currentStorageType = StorageType.DB;
+            ServiceHolder.initServiceHolder(currentStorageType);
             cargoService = ServiceHolder.getInstance().getCargoService();
             carrierService = ServiceHolder.getInstance().getCarrierService();
             transportationService = ServiceHolder.getInstance().getTransportationService();
@@ -43,16 +50,33 @@ public class Application {
             StorageInitor storageInitor = getStorageInitor(InitStorageType.DB_INITOR);
             storageInitor.initStorage();
 
+            //demoSaveInOneTransaction(currentStorageType);
             printStorageData();
             demoSearchOperations();
             demoSortOperations();
-            //demoDeleteElement();
+            demoDeleteElement();
 
-            //demoReportService();
+            demoReportService();
         } catch (InitStorageException e) {
             e.getCause().printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void demoSaveInOneTransaction(StorageType currentStorageType) throws Exception {
+        if (currentStorageType.equals(StorageType.DB)) {
+            List<Cargo> cargos = new ArrayList<>();
+            for (int i = 0; i < 4; i++) {
+                cargos.add(createClothersCargo(i));
+            }
+            ((CargoServiceImpl) cargoService).saveSeveralCargoes(cargos);
+
+            List<Carrier> carriers = new ArrayList<>();
+            for (int i = 0; i < 4; i++) {
+                carriers.add(createCarrier(i));
+            }
+            ((CarrierServiceImpl) carrierService).saveSeveralCarriers(carriers);
         }
     }
 
@@ -75,26 +99,35 @@ public class Application {
         }
         printSeparator();
 
-        System.out.println("SEARCH CARGOES BY NAME = 'Jeans'");
+        System.out.println("SEARCH TRANSPORTATION BY ID = 15");
+        Optional<Transportation> transportation = transportationService.findById(15L);
+        if (transportation.isPresent()) {
+            System.out.println(transportation);
+        } else {
+            System.out.println("transportation was not found");
+        }
+        printSeparator();
+
+        System.out.println("SEARCH CARGOES BY NAME = 'Jeans_2'");
         CollectionUtils.printCollection(cargoService.findByName("Jeans"));
         printSeparator();
 
-//        System.out.println("SEARCH CARRIERS BY NAME = 'Carrier_Name'");
-//        CollectionUtils.printCollection(carrierService.findByName("Carrier_Name"));
+        System.out.println("SEARCH CARRIERS BY NAME = 'Carrier_Name_1'");
+        CollectionUtils.printCollection(carrierService.findByName("Carrier_Name"));
     }
 
     private static void printStorageData() {
         System.out.println("ALL CARGOS");
         cargoService.printAll();
         printSeparator();
-/*
+
         System.out.println("ALL CARRIERS");
         carrierService.printAll();
         printSeparator();
 
         System.out.println("ALL TRANSPOORTATIONS");
         transportationService.printAll();
-        printSeparator();*/
+        printSeparator();
     }
 
     private static void printSeparator() {

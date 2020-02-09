@@ -1,16 +1,20 @@
 package task20_transportation_data_base.storage.initor.dbinitor;
 
 import task20_transportation_data_base.application.serviceholder.ServiceHolder;
+import task20_transportation_data_base.cargo.domain.Cargo;
 import task20_transportation_data_base.cargo.service.CargoService;
+import task20_transportation_data_base.carrier.domain.Carrier;
 import task20_transportation_data_base.carrier.service.CarrierService;
 import task20_transportation_data_base.common.business.exception.checked.InitStorageException;
 import task20_transportation_data_base.storage.initor.StorageInitor;
+import task20_transportation_data_base.transportation.domain.Transportation;
 import task20_transportation_data_base.transportation.service.TransportationService;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.Optional;
 
-import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.createClothersCargo;
-import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.createFoodCargo;
+import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.*;
 
 public class DBInitor implements StorageInitor {
     private static final int TOTAL_ENTITIES_IN_GROUP = 6;
@@ -31,9 +35,9 @@ public class DBInitor implements StorageInitor {
         //dropTables();
         //createTables();
 
-        // initCargos();
-        // initCarriers();
-        // initTransportations();
+        initCargos();
+        initCarriers();
+        initTransportations();
     }
 
     private void createTables() {
@@ -59,10 +63,9 @@ public class DBInitor implements StorageInitor {
         }
     }
 
-    /*private void initCarriers() {
+    private void initCarriers() {
         for (int i = 0; i < TOTAL_ENTITIES_IN_GROUP; i++) {
-            Carrier carrier = createCarrier(i);
-            carrierService.save(carrier);
+            carrierService.save(createCarrier(i));
         }
     }
 
@@ -79,9 +82,10 @@ public class DBInitor implements StorageInitor {
         cargo.ifPresent(transportation::setCargo);
         Optional<Carrier> carrier = carrierService.findById(carrierId);
         carrier.ifPresent(transportation::setCarrier);
-        transportation.setDescription("Transportation");
-
+        transportation.setDescription("Description_" + cargoId % carrierId);
+        transportation.setBillTo("BillTo_" + cargoId % carrierId);
+        transportation.setTransportationBeginDate(LocalDate.now());
         return transportation;
-    }*/
+    }
 
 }

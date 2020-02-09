@@ -41,7 +41,7 @@ public class TransportationSchemeInitor {
     }
 
     private static void createTransportationTable() throws SQLException {
-        String createCarrierTableStatement = "CREATE TABLE PUBLIC.TRANSPORTATION " +
+        String createCarrierTableStatement = "CREATE TABLE " +
                 TRANSPORTATION_TABLE_NAME +
                 "  (ID BIGINT NOT NULL PRIMARY KEY," +
                 "  DESCRIPTION VARCHAR(200)," +

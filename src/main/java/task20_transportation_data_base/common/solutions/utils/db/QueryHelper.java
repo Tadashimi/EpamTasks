@@ -26,6 +26,15 @@ public class QueryHelper {
         }
     }
 
+    public static int executeUpdateInConnection(String sql, Connection connection, JdbcConsumer<PreparedStatement> psConsumer) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            psConsumer.accept(preparedStatement);
+            return preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static <T> List<T> selectAll(String sql,
                                         JdbcFunction<ResultSet, T> rsConverter) {
         try (Connection connection = TransportationsConnectionPool.getInstance().getConnection();

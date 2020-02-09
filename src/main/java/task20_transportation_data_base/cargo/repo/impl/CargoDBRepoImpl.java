@@ -7,7 +7,10 @@ import task20_transportation_data_base.cargo.domain.FoodCargo;
 import task20_transportation_data_base.cargo.search.CargoSearchCondition;
 import task20_transportation_data_base.common.solutions.utils.db.QueryHelper;
 import task20_transportation_data_base.storage.IdGenerator;
+import task20_transportation_data_base.storage.initor.dbinitor.TransportationsConnectionPool;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.Types;
 import java.util.List;
 import java.util.Optional;
@@ -25,7 +28,7 @@ public class CargoDBRepoImpl extends CommonCargoRepo {
     public Cargo[] findByName(String name) {
         return QueryHelper.select("SELECT * FROM " + CARGO_TABLE_NAME +
                         " WHERE UPPER(NAME) LIKE UPPER(?)",
-                preparedStatement -> preparedStatement.setString(1, name+'%'),
+                preparedStatement -> preparedStatement.setString(1, name),
                 CargoMapper::mapCargo).toArray(new Cargo[0]);
     }
 
@@ -71,29 +74,33 @@ public class CargoDBRepoImpl extends CommonCargoRepo {
                 "INSERT INTO " + CARGO_TABLE_NAME +
                         " (ID, NAME, WEIGHT, CARGO_TYPE, STORED_TEMPERATURE, EXPIRATION_DATE, SIZE, MATERIAL)" +
                         " VALUES (?,?,?,?,?,?,?,?)",
-                preparedStatement -> {
-                    int i = 0;
-                    preparedStatement.setLong(++i, cargo.getId());
-                    preparedStatement.setString(++i, cargo.getName());
-                    preparedStatement.setInt(++i, cargo.getWeight());
-                    preparedStatement.setString(++i, cargo.getCargoType().toString());
-                    switch (cargo.getCargoType()) {
-                        case FOOD:
-                            preparedStatement.setInt(++i, ((FoodCargo) cargo).getStoreTemperature());
-                            preparedStatement.setDate(++i,
-                                    java.sql.Date.valueOf(((FoodCargo) cargo).getExpirationDate()));
-                            preparedStatement.setNull(++i, Types.VARCHAR);
-                            preparedStatement.setNull(++i, Types.VARCHAR);
-                            break;
-                        case CLOTHERS:
-                            preparedStatement.setNull(++i, Types.INTEGER);
-                            preparedStatement.setNull(++i, Types.DATE);
-                            preparedStatement.setString(++i, ((ClothersCargo) cargo).getSize());
-                            preparedStatement.setString(++i, ((ClothersCargo) cargo).getMaterial());
-                            break;
-                    }
-                }
+                preparedStatement -> setStatementParametersFromCargo(preparedStatement, cargo)
         );
+    }
+
+    private PreparedStatement setStatementParametersFromCargo(PreparedStatement preparedStatement,
+                                                              Cargo cargo) throws Exception {
+        int i = 0;
+        preparedStatement.setLong(++i, cargo.getId());
+        preparedStatement.setString(++i, cargo.getName());
+        preparedStatement.setInt(++i, cargo.getWeight());
+        preparedStatement.setString(++i, cargo.getCargoType().toString());
+        switch (cargo.getCargoType()) {
+            case FOOD:
+                preparedStatement.setInt(++i, ((FoodCargo) cargo).getStoreTemperature());
+                preparedStatement.setDate(++i,
+                        java.sql.Date.valueOf(((FoodCargo) cargo).getExpirationDate()));
+                preparedStatement.setNull(++i, Types.VARCHAR);
+                preparedStatement.setNull(++i, Types.VARCHAR);
+                break;
+            case CLOTHERS:
+                preparedStatement.setNull(++i, Types.INTEGER);
+                preparedStatement.setNull(++i, Types.DATE);
+                preparedStatement.setString(++i, ((ClothersCargo) cargo).getSize());
+                preparedStatement.setString(++i, ((ClothersCargo) cargo).getMaterial());
+                break;
+        }
+        return preparedStatement;
     }
 
     @Override
@@ -153,5 +160,37 @@ public class CargoDBRepoImpl extends CommonCargoRepo {
     public int countAll() {
         return QueryHelper.getRowsCount("SELECT COUNT (*) AS TOTAL_COUNT FROM " + CARGO_TABLE_NAME,
                 resultSet -> resultSet.getInt("TOTAL_COUNT"));
+    }
+
+    public int saveSeveralCargoes(List<Cargo> cargos) throws Exception {
+        boolean autoCommitState = true;
+        Connection connection = null;
+        int affectedRows = 0;
+        try {
+            connection = TransportationsConnectionPool.getInstance().getConnection();
+            autoCommitState = connection.getAutoCommit();
+            connection.setAutoCommit(false);
+
+            for (Cargo cargo : cargos) {
+                cargo.setId(IdGenerator.generateId());
+                affectedRows += QueryHelper.executeUpdateInConnection("INSERT INTO " + CARGO_TABLE_NAME +
+                                " (ID, NAME, WEIGHT, CARGO_TYPE, STORED_TEMPERATURE, EXPIRATION_DATE, SIZE, MATERIAL)" +
+                                " VALUES (?,?,?,?,?,?,?,?)", connection,
+                        preparedStatement -> setStatementParametersFromCargo(preparedStatement, cargo));
+            }
+            connection.commit();
+
+        } catch (Exception e) {
+            if (connection != null) {
+                connection.rollback();
+            }
+            throw new RuntimeException("Error in transaction");
+        } finally {
+            if (connection != null) {
+                connection.setAutoCommit(autoCommitState);
+                connection.close();
+            }
+        }
+        return affectedRows;
     }
 }

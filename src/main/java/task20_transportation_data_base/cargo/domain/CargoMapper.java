@@ -2,6 +2,8 @@ package task20_transportation_data_base.cargo.domain;
 
 import java.sql.ResultSet;
 
+import static task20_transportation_data_base.storage.initor.dbinitor.DbConstants.CARGO_TABLE_NAME;
+
 public class CargoMapper {
     public static Cargo mapCargo(ResultSet resultSet) throws Exception {
         Cargo cargo = null;
@@ -18,8 +20,8 @@ public class CargoMapper {
                 ((ClothersCargo) cargo).setMaterial(resultSet.getString("MATERIAL"));
                 break;
         }
-        cargo.setId(resultSet.getLong("ID"));
-        cargo.setName(resultSet.getString("NAME"));
+        cargo.setId(resultSet.getLong(CARGO_TABLE_NAME + ".ID"));
+        cargo.setName(resultSet.getString(CARGO_TABLE_NAME + ".NAME"));
         cargo.setWeight(resultSet.getInt("WEIGHT"));
         return cargo;
     }

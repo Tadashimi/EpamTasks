@@ -4,6 +4,7 @@ package task20_transportation_data_base.carrier.domain;
 import task20_transportation_data_base.common.business.domain.BaseEntity;
 import task20_transportation_data_base.transportation.domain.Transportation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Carrier extends BaseEntity {
@@ -44,6 +45,13 @@ public class Carrier extends BaseEntity {
 
     public void setTransportations(List<Transportation> transportations) {
         this.transportations = transportations;
+    }
+
+    public void addTransportation(Transportation transportation) {
+        if (transportations == null) {
+            transportations = new ArrayList<>();
+        }
+        transportations.add(transportation);
     }
 
     @Override

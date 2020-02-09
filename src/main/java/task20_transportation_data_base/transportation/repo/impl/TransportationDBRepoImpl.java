@@ -7,9 +7,7 @@ import task20_transportation_data_base.transportation.domain.Transportation;
 import task20_transportation_data_base.transportation.domain.TransportationMapper;
 import task20_transportation_data_base.transportation.repo.TransportationRepo;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
+import java.sql.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +15,11 @@ import static task20_transportation_data_base.common.solutions.utils.db.QueryHel
 import static task20_transportation_data_base.storage.initor.dbinitor.DbConstants.*;
 
 public class TransportationDBRepoImpl implements TransportationRepo {
+
+    private final String INSERT_SQL = "INSERT INTO " + TRANSPORTATION_TABLE_NAME +
+            " (ID, DESCRIPTION, BILL_TO, BEGIN_DATE, CARGO_ID, CARRIER_ID)" +
+            " VALUES (?,?,?,?,?,?)";
+
     @Override
     public Optional<Transportation> findById(Long id) {
         String sql = "SELECT * FROM " +
@@ -36,25 +39,30 @@ public class TransportationDBRepoImpl implements TransportationRepo {
         //TODO Return affected rows count.
         //int affectedRows =
         executeUpdate(
-                "INSERT INTO " + TRANSPORTATION_TABLE_NAME +
-                        " (ID, DESCRIPTION, BILL_TO, BEGIN_DATE, CARGO_ID, CARRIER_ID)" +
-                        " VALUES (?,?,?,?,?,?)",
-                preparedStatement -> {
-                    int i = 0;
-                    preparedStatement.setLong(++i, transportation.getId());
-                    preparedStatement.setString(++i, transportation.getDescription());
-                    preparedStatement.setString(++i, transportation.getBillTo());
-                    preparedStatement.setDate(++i, Date.valueOf(transportation.getTransportationBeginDate()));
-                    i++;
-                    if (transportation.getCargo() != null) {
-                        preparedStatement.setLong(i, transportation.getCargo().getId());
-                    }
-                    i++;
-                    if (transportation.getCarrier() != null) {
-                        preparedStatement.setLong(i, transportation.getCarrier().getId());
-                    }
-                }
+                INSERT_SQL,
+                preparedStatement -> setStatementParametersFromCarrier(preparedStatement, transportation)
         );
+    }
+
+    private PreparedStatement setStatementParametersFromCarrier(PreparedStatement preparedStatement, Transportation transportation) throws Exception {
+        int i = 0;
+        preparedStatement.setLong(++i, transportation.getId());
+        preparedStatement.setString(++i, transportation.getDescription());
+        preparedStatement.setString(++i, transportation.getBillTo());
+        preparedStatement.setDate(++i, Date.valueOf(transportation.getTransportationBeginDate()));
+        i++;
+        if (transportation.getCargo() != null) {
+            preparedStatement.setLong(i, transportation.getCargo().getId());
+        } else {
+            preparedStatement.setNull(i, Types.BIGINT);
+        }
+        i++;
+        if (transportation.getCarrier() != null) {
+            preparedStatement.setLong(i, transportation.getCarrier().getId());
+        } else {
+            preparedStatement.setNull(i, Types.BIGINT);
+        }
+        return preparedStatement;
     }
 
     @Override
@@ -89,8 +97,7 @@ public class TransportationDBRepoImpl implements TransportationRepo {
 
     @Override
     public boolean deleteById(Long id) {
-        int affectedRows = executeUpdate("DELETE FROM " + TRANSPORTATION_TABLE_NAME +
-                        " WHERE ID = ?",
+        int affectedRows = executeUpdate("DELETE FROM " + TRANSPORTATION_TABLE_NAME + " WHERE ID = ?",
                 preparedStatement -> preparedStatement.setLong(1, id));
         return affectedRows == 1;
     }
@@ -108,5 +115,38 @@ public class TransportationDBRepoImpl implements TransportationRepo {
     public int countAll() {
         return QueryHelper.getRowsCount("SELECT COUNT (*) AS TOTAL_COUNT FROM " + TRANSPORTATION_TABLE_NAME,
                 resultSet -> resultSet.getInt("TOTAL_COUNT"));
+    }
+
+    public int saveSeveralCarriers(List<Transportation> transportations) throws SQLException {
+        boolean autoCommitState = true;
+        Connection connection = null;
+        int affectedRows = 0;
+
+        try {
+            connection = TransportationsConnectionPool.getInstance().getConnection();
+            autoCommitState = connection.getAutoCommit();
+            connection.setAutoCommit(false);
+
+            for (Transportation transportation : transportations) {
+                transportation.setId(IdGenerator.generateId());
+                affectedRows += QueryHelper.executeUpdateInConnection(
+                        INSERT_SQL,
+                        connection,
+                        preparedStatement -> setStatementParametersFromCarrier(preparedStatement, transportation));
+            }
+            connection.commit();
+
+        } catch (Exception e) {
+            if (connection != null) {
+                connection.rollback();
+            }
+            throw new RuntimeException("Error in transaction");
+        } finally {
+            if (connection != null) {
+                connection.setAutoCommit(autoCommitState);
+                connection.close();
+            }
+        }
+        return affectedRows;
     }
 }

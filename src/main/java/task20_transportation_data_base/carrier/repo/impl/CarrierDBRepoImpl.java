@@ -8,6 +8,7 @@ import task20_transportation_data_base.storage.IdGenerator;
 import task20_transportation_data_base.storage.initor.dbinitor.TransportationsConnectionPool;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
@@ -16,6 +17,10 @@ import static task20_transportation_data_base.common.solutions.utils.db.QueryHel
 import static task20_transportation_data_base.storage.initor.dbinitor.DbConstants.CARRIER_TABLE_NAME;
 
 public class CarrierDBRepoImpl implements CarrierRepo {
+    private final String INSERT_SQL = "INSERT INTO " + CARRIER_TABLE_NAME +
+            " (ID, NAME, ADDRESS, CARRIER_TYPE)" +
+            " VALUES (?,?,?,?)";
+
     @Override
     public Optional<Carrier> getByIdFetchingTransportations(long id) {
         return findById(id);
@@ -32,8 +37,7 @@ public class CarrierDBRepoImpl implements CarrierRepo {
 
     @Override
     public Optional<Carrier> findById(Long id) {
-        Carrier carrier = QueryHelper.selectOne("SELECT * FROM " + CARRIER_TABLE_NAME +
-                        " WHERE ID = ?",
+        Carrier carrier = QueryHelper.selectOne("SELECT * FROM " + CARRIER_TABLE_NAME + " WHERE ID = ?",
                 preparedStatement -> preparedStatement.setLong(1, id),
                 CarrierMapper::mapCarrier);
         return Optional.ofNullable(carrier);
@@ -45,16 +49,8 @@ public class CarrierDBRepoImpl implements CarrierRepo {
         //TODO Return affected rows count.
         //int affectedRows =
         executeUpdate(
-                "INSERT INTO " + CARRIER_TABLE_NAME +
-                        " (ID, NAME, ADDRESS, CARRIER_TYPE)" +
-                        " VALUES (?,?,?,?)",
-                preparedStatement -> {
-                    int i = 0;
-                    preparedStatement.setLong(++i, carrier.getId());
-                    preparedStatement.setString(++i, carrier.getName());
-                    preparedStatement.setString(++i, carrier.getAddress());
-                    preparedStatement.setString(++i, carrier.getCarrierType().toString());
-                }
+                INSERT_SQL,
+                preparedStatement -> setStatementParametersFromCarrier(preparedStatement, carrier)
         );
     }
 
@@ -78,10 +74,18 @@ public class CarrierDBRepoImpl implements CarrierRepo {
         return affectedRows == 1;
     }
 
+    private PreparedStatement setStatementParametersFromCarrier(PreparedStatement preparedStatement, Carrier carrier) throws Exception {
+        int i = 0;
+        preparedStatement.setLong(++i, carrier.getId());
+        preparedStatement.setString(++i, carrier.getName());
+        preparedStatement.setString(++i, carrier.getAddress());
+        preparedStatement.setString(++i, carrier.getCarrierType().toString());
+        return preparedStatement;
+    }
+
     @Override
     public boolean deleteById(Long id) {
-        int affectedRows = executeUpdate("DELETE FROM " + CARRIER_TABLE_NAME +
-                        " WHERE ID = ?",
+        int affectedRows = executeUpdate("DELETE FROM " + CARRIER_TABLE_NAME + " WHERE ID = ?",
                 preparedStatement -> preparedStatement.setLong(1, id));
         return affectedRows == 1;
     }
@@ -110,16 +114,10 @@ public class CarrierDBRepoImpl implements CarrierRepo {
 
             for (Carrier carrier : carriers) {
                 carrier.setId(IdGenerator.generateId());
-                affectedRows += QueryHelper.executeUpdateInConnection("INSERT INTO " + CARRIER_TABLE_NAME +
-                                " (ID, NAME, ADDRESS, CARRIER_TYPE)" +
-                                " VALUES (?,?,?,?)", connection,
-                        preparedStatement -> {
-                            int i = 0;
-                            preparedStatement.setLong(++i, carrier.getId());
-                            preparedStatement.setString(++i, carrier.getName());
-                            preparedStatement.setString(++i, carrier.getAddress());
-                            preparedStatement.setString(++i, carrier.getCarrierType().toString());
-                        });
+                affectedRows += QueryHelper.executeUpdateInConnection(
+                        INSERT_SQL,
+                        connection,
+                        preparedStatement -> setStatementParametersFromCarrier(preparedStatement, carrier));
             }
             connection.commit();
 

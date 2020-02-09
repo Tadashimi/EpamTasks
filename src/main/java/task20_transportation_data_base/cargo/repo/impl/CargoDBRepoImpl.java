@@ -19,6 +19,10 @@ import static task20_transportation_data_base.common.solutions.utils.db.QueryHel
 import static task20_transportation_data_base.storage.initor.dbinitor.DbConstants.CARGO_TABLE_NAME;
 
 public class CargoDBRepoImpl extends CommonCargoRepo {
+    private final String INSERT_SQL = "INSERT INTO " + CARGO_TABLE_NAME +
+            " (ID, NAME, WEIGHT, CARGO_TYPE, STORED_TEMPERATURE, EXPIRATION_DATE, SIZE, MATERIAL)" +
+            " VALUES (?,?,?,?,?,?,?,?)";
+
     @Override
     public Optional<Cargo> getByIdFetchingTransportations(long id) {
         return findById(id);
@@ -71,9 +75,7 @@ public class CargoDBRepoImpl extends CommonCargoRepo {
         //TODO Return affected rows count.
         //int affectedRows =
         executeUpdate(
-                "INSERT INTO " + CARGO_TABLE_NAME +
-                        " (ID, NAME, WEIGHT, CARGO_TYPE, STORED_TEMPERATURE, EXPIRATION_DATE, SIZE, MATERIAL)" +
-                        " VALUES (?,?,?,?,?,?,?,?)",
+                INSERT_SQL,
                 preparedStatement -> setStatementParametersFromCargo(preparedStatement, cargo)
         );
     }
@@ -173,9 +175,9 @@ public class CargoDBRepoImpl extends CommonCargoRepo {
 
             for (Cargo cargo : cargos) {
                 cargo.setId(IdGenerator.generateId());
-                affectedRows += QueryHelper.executeUpdateInConnection("INSERT INTO " + CARGO_TABLE_NAME +
-                                " (ID, NAME, WEIGHT, CARGO_TYPE, STORED_TEMPERATURE, EXPIRATION_DATE, SIZE, MATERIAL)" +
-                                " VALUES (?,?,?,?,?,?,?,?)", connection,
+                affectedRows += QueryHelper.executeUpdateInConnection(
+                        INSERT_SQL,
+                        connection,
                         preparedStatement -> setStatementParametersFromCargo(preparedStatement, cargo));
             }
             connection.commit();

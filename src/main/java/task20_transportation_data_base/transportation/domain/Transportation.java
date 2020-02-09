@@ -45,6 +45,7 @@ public class Transportation extends BaseEntity {
 
     public void setCargo(Cargo cargo) {
         this.cargo = cargo;
+        cargo.addTransportation(this);
     }
 
     public Carrier getCarrier() {
@@ -53,6 +54,7 @@ public class Transportation extends BaseEntity {
 
     public void setCarrier(Carrier carrier) {
         this.carrier = carrier;
+        carrier.addTransportation(this);
     }
 
     @Override

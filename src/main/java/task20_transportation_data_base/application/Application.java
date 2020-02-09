@@ -109,11 +109,11 @@ public class Application {
         printSeparator();
 
         System.out.println("SEARCH CARGOES BY NAME = 'Jeans_2'");
-        CollectionUtils.printCollection(cargoService.findByName("Jeans"));
+        CollectionUtils.printCollection(cargoService.findByName("Jeans_2"));
         printSeparator();
 
         System.out.println("SEARCH CARRIERS BY NAME = 'Carrier_Name_1'");
-        CollectionUtils.printCollection(carrierService.findByName("Carrier_Name"));
+        CollectionUtils.printCollection(carrierService.findByName("Carrier_Name_1"));
     }
 
     private static void printStorageData() {

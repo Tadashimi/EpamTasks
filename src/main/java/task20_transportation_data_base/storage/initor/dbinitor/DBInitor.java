@@ -33,7 +33,7 @@ public class DBInitor implements StorageInitor {
     public void initStorage() throws InitStorageException {
         /*Scheme manipulation. Uncomment if necessary*/
         //dropTables();
-        //createTables();
+        createTables();
 
         initCargos();
         initCarriers();

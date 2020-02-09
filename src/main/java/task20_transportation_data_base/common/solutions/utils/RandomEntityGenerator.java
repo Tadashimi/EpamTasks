@@ -12,7 +12,8 @@ public class RandomEntityGenerator {
     public static ClothersCargo createClothersCargo(int index) {
         ClothersCargo cargo = new ClothersCargo();
         cargo.setSize("Clothers_Size_" + index);
-        cargo.setName("Jeans");
+        cargo.setMaterial("Material_" + index);
+        cargo.setName("Jeans_" + index);
         cargo.setWeight(ThreadLocalRandom.current().nextInt(1, 100 + 1));
 
         return cargo;
@@ -23,14 +24,14 @@ public class RandomEntityGenerator {
         cargo.setExpirationDate(LocalDate.now());
         cargo.setStoreTemperature(index);
         cargo.setWeight(ThreadLocalRandom.current().nextInt(1, 100 + 1));
-        cargo.setName("Milk");
+        cargo.setName("Milk_" + index);
 
         return cargo;
     }
 
     public static Carrier createCarrier(int index) {
         Carrier carrier = new Carrier();
-        carrier.setName("Carrier_Name");
+        carrier.setName("Carrier_Name_" + index);
         carrier.setAddress("Address_" + index);
         return carrier;
     }

@@ -44,11 +44,11 @@ public class Application {
             storageInitor.initStorage();
 
             printStorageData();
-            /*demoSearchOperations();
+            demoSearchOperations();
             demoSortOperations();
-            demoDeleteElement();
+            //demoDeleteElement();
 
-            demoReportService();*/
+            //demoReportService();
         } catch (InitStorageException e) {
             e.getCause().printStackTrace();
         } catch (Exception e) {
@@ -75,12 +75,12 @@ public class Application {
         }
         printSeparator();
 
-        System.out.println("SEARCH CARGOES BY NAME = 'Clothers_Name_1'");
-        CollectionUtils.printCollection(cargoService.findByName("Clothers_Name_1"));
+        System.out.println("SEARCH CARGOES BY NAME = 'Jeans'");
+        CollectionUtils.printCollection(cargoService.findByName("Jeans"));
         printSeparator();
 
-        System.out.println("SEARCH CARRIERS BY NAME = 'Carrier_Name'");
-        CollectionUtils.printCollection(carrierService.findByName("Carrier_Name"));
+//        System.out.println("SEARCH CARRIERS BY NAME = 'Carrier_Name'");
+//        CollectionUtils.printCollection(carrierService.findByName("Carrier_Name"));
     }
 
     private static void printStorageData() {
@@ -137,8 +137,8 @@ public class Application {
         cargoSearchCondition.setSortFields(new LinkedHashSet<>(sortFields));
         System.out.println(
                 "\n---------Sorting '" + getOrderingConditionsAsString(cargoSearchCondition) + "'------\n");
-        cargoService.search(cargoSearchCondition);
-        cargoService.printAll();
+        List<Cargo> cargos = cargoService.search(cargoSearchCondition);
+        cargos.forEach(System.out::println);
     }
 
     private static void demoDeleteElement() {

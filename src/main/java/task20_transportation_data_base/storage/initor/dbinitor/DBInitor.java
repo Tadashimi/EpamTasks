@@ -2,16 +2,15 @@ package task20_transportation_data_base.storage.initor.dbinitor;
 
 import task20_transportation_data_base.application.serviceholder.ServiceHolder;
 import task20_transportation_data_base.cargo.service.CargoService;
-import task20_transportation_data_base.carrier.domain.Carrier;
 import task20_transportation_data_base.carrier.service.CarrierService;
 import task20_transportation_data_base.common.business.exception.checked.InitStorageException;
 import task20_transportation_data_base.storage.initor.StorageInitor;
 import task20_transportation_data_base.transportation.service.TransportationService;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 
-import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.*;
+import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.createClothersCargo;
+import static task20_transportation_data_base.common.solutions.utils.RandomEntityGenerator.createFoodCargo;
 
 public class DBInitor implements StorageInitor {
     private static final int TOTAL_ENTITIES_IN_GROUP = 6;
@@ -28,16 +27,27 @@ public class DBInitor implements StorageInitor {
 
     @Override
     public void initStorage() throws InitStorageException {
+        /*Scheme manipulation. Uncomment if necessary*/
+        //dropTables();
+        //createTables();
+
+        // initCargos();
+        // initCarriers();
+        // initTransportations();
+    }
+
+    private void createTables() {
         try {
-            Connection connection = TransportationsDataSource.getConnection();
-            TransportationSchemeInitor.createTables(connection);
+            TransportationSchemeInitor.createTables();
         } catch (SQLException ignored) {
-
         }
+    }
 
-        //initCargos();
-        //initCarriers();
-        //initTransportations();
+    private void dropTables() {
+        try {
+            TransportationSchemeInitor.dropTables();
+        } catch (SQLException ignored) {
+        }
     }
 
     private void initCargos() {
@@ -49,17 +59,17 @@ public class DBInitor implements StorageInitor {
         }
     }
 
-    private void initCarriers() {
+    /*private void initCarriers() {
         for (int i = 0; i < TOTAL_ENTITIES_IN_GROUP; i++) {
             Carrier carrier = createCarrier(i);
             carrierService.save(carrier);
         }
     }
-    /*
+
     private void initTransportations() {
         for (int i = 0; i < TOTAL_ENTITIES_IN_GROUP; i++) {
             Transportation transportation = createTransportation(i + 1, i + 1 + TOTAL_ENTITIES_IN_GROUP);
-            transportationService.save(transportation, Optional.empty());
+            transportationService.save(transportation);
         }
     }
 
@@ -72,6 +82,6 @@ public class DBInitor implements StorageInitor {
         transportation.setDescription("Transportation");
 
         return transportation;
-    }
-    */
+    }*/
+
 }
